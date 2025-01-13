@@ -1,0 +1,28 @@
+.about-section{
+    &__widget{
+        border: 2px solid $black;
+        border-radius: 32px;
+        padding: 80px 40px;
+        
+        &::after{
+            @include after();
+            background:
+            linear-gradient(90deg, rgba(7, 8, 10, 1) 57%, rgba(7, 8, 10, 0) 75%);
+            background-blend-mode: color-burn;
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+        &::before{
+            @include before();
+            background-image: url('../images/about.png');
+            background-repeat: no-repeat;
+            background-position: right;
+
+        }
+  
+
+       
+
+
+    }
+}

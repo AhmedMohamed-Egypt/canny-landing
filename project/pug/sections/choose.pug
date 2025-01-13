@@ -1,0 +1,14 @@
+- cards = [{title:'Customizable, Cutting-Edge Solutions',text:'Each solution is designed to integrate seamlessly into your existing infrastructure and tailored to meet the specific needs of your organization.'},{title:'Quality, Privacy, and Security',text:'We prioritize data privacy and security, ensuring all solutions comply with Canadian standards and regulations.'},{title:'Canadian Market Focus',text:'As a Canadian company, we understand the unique challenges and opportunities in Canada’s regulatory landscape and local industries.'},{title:'Core Expertise in Cognitive Vision',text:'With deep expertise in Cognitive Vision, we deliver intelligent systems that don’t just monitor—they understand and learn from complex visual environments.'}]
+.choose 
+ h2(class="h2-heading text-center mb-5") Why Choose Canny Vision?
+ .container 
+  .choose__cards.mt-5.pt-5
+   .row 
+    each val in cards 
+     .col-6.mb-5
+      div(class="choose__cards--card")
+       .col-7.mb-5
+        h2(class="size-48 text-white position-relative z-3")=val.title 
+       .col-8 
+        p(class="size-18 fw-lighter text-white position-relative z-3")=val.text
+     

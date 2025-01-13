@@ -1,0 +1,21 @@
+- var cards = [{title:'Government and Defense',text:'Strengthen public safety, secure sensitive facilities, and enhance surveillance capabilities with AI-powered solutions designed for high-security environments.',class:'red'},{title:'Retail',text:'Improve store security, understand customer behavior, and drive operational efficiency with real-time insights and advanced analytics',class:'orange'},{title:'Transportation and Logistics',text:'Monitor traffic flow, ensure road safety, and optimize logistical operations with datadriven traffic management and incident detection.',class:'green'}]
+
+.industries 
+ .container 
+  .industries__cards 
+   h2(class="h2-heading text-center mb-3") Industries
+   .col-5.mx-auto.mb-5
+    p(class="ft-normal size-18 text-center") Our solutions are tailored to meet the unique needs of diverse sectors, ensuring that each industry benefits from our specialized approach to video analytics:
+   .industries__cards--card
+    .row
+     each val in cards 
+      .col-4
+       svg.svg.position-absolute
+        clippath#my-clip-path(clippathunits='objectBoundingBox')
+         path(d='M0.842,0 H0.076 C0.034,0,0,0.048,0,0.107 V0.893 C0,0.952,0.034,1,0.076,1 H0.924 C0.966,1,1,0.952,1,0.893 V0.2 C1,0.167,0.989,0.136,0.971,0.116 L0.889,0.023 C0.875,0.008,0.859,0,0.842,0')
+        div(class=`clipped ${val.class}`)
+         .col-10.mx-auto
+           div(class="d-flex align-items-center mb-3")
+            span.icon.d-block
+            h2(class="size-25 ")=val.title
+           p(class="size-18")=val.text 

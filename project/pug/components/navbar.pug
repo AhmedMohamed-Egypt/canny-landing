@@ -1,0 +1,15 @@
+- var links = ['Home','About us','Our Product','Our Expertise','Industries','Why Choose Us']
+
+.hero__nav.py-4.position-relative
+  .container 
+   div.d-flex.align-items-center.position-relative.z-3
+    a(href="#" class="me-auto")
+     img(src="/images/canny-logo.svg")
+    ul(class="d-flex align-items-center")
+     each val in links 
+      li 
+       a(href="#" class="grey-72 roboto-font size-16 fw-medium")=val
+     li
+      button(class="switch-mode btn")
+       
+   

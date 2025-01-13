@@ -1,0 +1,23 @@
+body{
+  font-family: "Roboto", serif;
+}
+.roboto-font{
+  font-family: "Roboto", serif;
+}
+.h2-heading{
+  font-family: "Roboto", serif;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+/*loop font size*/
+@for $i from 1 through 60{
+  .size-#{$i}{
+    font-size: $i+px;
+  }
+}
+@for $i from 1 through 10{
+  .weight-#{$i*100}{
+    font-weight: #{$i*100};
+  }
+}

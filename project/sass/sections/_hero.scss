@@ -1,0 +1,41 @@
+.hero{
+
+    background-image: url('../images/hero.svg');
+    &::after{
+        @include after();
+        background: linear-gradient(180deg, rgba(17, 20, 27, 0) 0%, #000000 100%);
+        top: auto;
+        bottom: 0;
+        height: 20%;
+
+    }
+   // height: 600px;
+    &_content{
+        padding: 130px 0;
+        &__mainheading{
+            max-width: 624px;
+        }
+    }
+
+
+
+
+
+
+    &__nav{
+        &::after{
+            @include after();
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 45%, rgba(0, 0, 0, 0) 100%);
+        }
+      
+        ul{
+            li{
+                &:not(:last-child){
+                  a{
+                    margin-right: 30px;
+                  }
+                }
+            }
+        }
+    }
+}

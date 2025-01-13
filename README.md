@@ -1,2 +1,1 @@
-# canny-landing
-canny-vision
+https://dubai-games.netlify.app/

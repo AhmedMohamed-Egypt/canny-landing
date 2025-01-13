@@ -1,0 +1,23 @@
+- var cards =  [{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.'},{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.'},{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.'}]
+.expertise
+ .container-3  
+  h2(class="h2-heading text-center") Our Expertise 
+  p(class="ft-normal size-18 text-center") Innovative VideoAnalytics Solutions
+  .expertise__slider.mt-5
+   .swiper.swiper-container
+    .swiper-wrapper
+     each val in cards  
+      .swiper-slide
+       .expertise__card
+        .expertise__content 
+         .col-6
+          h2(class="text-white position-relative z-3 size-45 mb-3")=val.title 
+         .col-7.expertise__card--txt
+          p(class="fw-lighter text-white position-relative z-3 size-17")=val.text
+        
+  .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
+   
+
+  
