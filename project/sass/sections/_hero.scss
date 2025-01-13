@@ -39,3 +39,30 @@
         }
     }
 }
+
+//fixed nav
+
+body.fixed{
+    .hero__nav{
+      position: fixed !important;
+      width: 100%;
+      padding: 10px 0 !important;
+      animation-name: slide;
+      animation-timing-function: ease-in-out;
+      animation-duration: .5s;
+      animation-fill-mode: both;
+      background-color: #000;
+      z-index: 99999999999;
+    
+    }
+}
+
+
+@keyframes slide {
+    0%{
+        top: -50px;
+    }
+    100%{
+        top: 0;
+    }
+}
