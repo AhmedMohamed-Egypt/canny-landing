@@ -34,6 +34,8 @@ window.onscroll = ()=>{
   scrollNav()
 }
 
+
+
 //get current year
 
 document.querySelector('.currentYear').textContent = new Date().getFullYear()

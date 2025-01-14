@@ -1,4 +1,24 @@
 .ourlocations{
+
+    &::after{
+        @include after();
+        
+        bottom: 0;
+        background: #ed1a37;
+        opacity: .1;
+        -webkit-filter: blur(188.6px);
+        filter: blur(188.6px);
+        width: 50%;
+        right: 0;
+        left: auto;
+        z-index: -1;
+        height: 52%;
+        top: auto;
+
+
+
+
+    }
     &__container{
         &::after{
             @include after();
