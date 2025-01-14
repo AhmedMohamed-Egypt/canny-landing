@@ -1,0 +1,27 @@
+.ourlocations{
+    &__container{
+        &::after{
+            @include after();
+            background: linear-gradient(-180deg, rgba(7, 8, 10, 0) 23.88%, #07080A 103.83%);
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+           
+          
+
+
+
+        }
+        &--info{
+             color: white;
+            @include cntrElmnt();
+            top: auto;
+            bottom: 0;
+            z-index: 999;
+        }
+    }
+}
+.footer{
+    background-color: $drk-black-1;
+    padding: 50px 0;
+    text-align: center;
+}
