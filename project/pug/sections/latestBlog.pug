@@ -1,0 +1,24 @@
+- var cards = [{title:'Contrary to popular beliefI psum is not simply random',img:'images/blog-1.svg'},{title:'Contrary to popular beliefI psum is not simply random',img:'images/blog-2.svg'},{title:'Contrary to popular beliefI psum is not simply random',img:'images/blog-3.svg'}]
+
+
+.latestBlog 
+ .container 
+  h2(class="h2-heading text-center mb-5") Our Latest Blog 
+  .latestBlog__swiper 
+   .swiper.swiper-container
+    .swiper-wrapper
+     each val in cards
+      .swiper-slide
+       .latestBlog__swiper--card
+        img(src=`${val.img}` class="position-relative top-1 w-100")
+        div(class="latestBlog__swiper--card--body")
+         div(class="d-flex align-items-center mb-3")
+          img(src="/images/person.svg")
+          p(class="text-white fw-normal size-17 ms-2") Dec 2 , 2024
+         h2(class="w-700 size-22 text-white")=val.title
+  .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
+
+     
+  
