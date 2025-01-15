@@ -23,8 +23,25 @@
             border-radius: 30px;
             position: relative;
             overflow: hidden;
+            @include max(768){
+                
+                height: auto;
+                padding-bottom: 50px;
+             }
             h2{
                 height: 170px;
+                @include max(768){
+                   font-size: 25px;
+                   height: auto;
+                }
+            }
+            p{
+                @include max(768){
+                    font-size: 18px;
+                }
+                @include max(500){
+                    font-size: 12px;
+                }
             }
             &::after{
                 @include after();

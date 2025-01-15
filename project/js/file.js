@@ -33,6 +33,28 @@ const scrollNav = ()=>{
 window.onscroll = ()=>{
   scrollNav()
 }
+//jamburg menu 
+let show = false
+const showMenu =()=>{
+  const hamburgBtn = document.querySelector('.hamburgMenu')
+  
+
+
+  hamburgBtn.addEventListener('click',()=>{
+    if(!show){
+      document.body.classList.add('showmenu')
+      show = true
+      console.log(show)
+    }else {
+      show = false
+      document.body.classList.remove('showmenu')
+      console.log(show)
+    }
+    
+  })
+}
+showMenu()
+
 
 
 

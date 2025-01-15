@@ -14,7 +14,7 @@
     <div class="hero bg-cover bg-center position-relative">
       <div class="hero__nav py-4 position-relative">
         <div class="container"> 
-          <div class="d-flex align-items-center position-relative z-3"><a class="me-auto" href="#"><img src="/images/canny-logo.svg"></a>
+          <div class="d-flex align-items-center position-relative z-3 hero__nav--wrapnav"><a class="me-auto" href="#"><img src="/images/canny-logo.svg"></a>
             <ul class="d-flex align-items-center">
               <li> <a class="grey-72 roboto-font size-16 fw-medium" href="#">Home</a></li>
               <li> <a class="grey-72 roboto-font size-16 fw-medium" href="#">About us</a></li>
@@ -26,6 +26,7 @@
                 <button class="switch-mode btn"></button>
               </li>
             </ul>
+            <div class="hamburgMenu"> <span> </span><span> </span><span></span></div>
           </div>
         </div>
       </div>
@@ -41,10 +42,13 @@
       <div class="about-section pt-5">
         <div class="container"> 
           <div class="about-section__widget position-relative overflow-hidden">
-            <h2 class="mb-4 h2-heading text-white position-relative z-3">About Us </h2>
-            <div class="col-6"> 
-              <p class="mb-4 size-18  fw-lighter text-white position-relative z-3"><b>Canny Vision</b> is a Canadian startup delivering <b>customizable AI solutions</b> in motion detection, object classification, behavior tracking, <b>incident detection, and traffic monitoring</b>. With a strong commitment to <b>quality, privacy, and security</b>, our team of experts harnesses the latest advancements in <b>Cognitive Vision and Video Analytics</b> to provide reliable, scalable solutions across key industries.</p>
-              <p class="size-18  fw-lighter text-white position-relative z-3">Focused exclusively on the Canadian market, Canny Vision stands at the forefront of video analytics technology, helping organizations elevate their security, efficiency, and intelligence.</p>
+            <div class="about-section__widget--before"></div>
+            <div>
+              <h2 class="mb-4 h2-heading text-white position-relative z-3">About Us </h2>
+              <div class="col-xl-6 about-section__widget--txt">
+                <p class="mb-4 size-18  fw-lighter text-white position-relative z-3"><b>Canny Vision</b> is a Canadian startup delivering <b>customizable AI solutions</b> in motion detection, object classification, behavior tracking, <b>incident detection, and traffic monitoring</b>. With a strong commitment to <b>quality, privacy, and security</b>, our team of experts harnesses the latest advancements in <b>Cognitive Vision and Video Analytics</b> to provide reliable, scalable solutions across key industries.</p>
+                <p class="size-18  fw-lighter text-white position-relative z-3">Focused exclusively on the Canadian market, Canny Vision stands at the forefront of video analytics technology, helping organizations elevate their security, efficiency, and intelligence.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -52,14 +56,14 @@
       <div class="product-section mt-5 pt-5">
         <div class="container"> 
           <div class="row align-items-center">
-            <div class="col-6"> 
+            <div class="col-xl-6">
               <div class="product-section--txt pe-3 position-relative z-3">
                 <h2 class="h2-heading mb-3">Our Product </h2>
                 <p class=" fw-light size-22">Customizable, Cutting-Edge Solutions Quality, Privacy, and Security Each solution is designed to integrate seamlessly into your existing infrastructure and tailored to meet the specific needs of your organization.</p>
                 <p class=" fw-light size-22 mt-3">We prioritize data privacy and security, ensuring all solutions comply with Canadian standards and regulations.</p>
               </div>
             </div>
-            <div class="col-6"><img src="./images/product.png"></div>
+            <div class="col-xl-6"><img class="w-100 mw-100 mx-auto m-xl-0 d-block mt-5" src="./images/product.png"></div>
           </div>
         </div>
       </div>
@@ -120,12 +124,12 @@
       <div class="container"> 
         <div class="industries__cards"> 
           <h2 class="h2-heading text-center mb-3">Industries</h2>
-          <div class="col-5 mx-auto mb-5">
+          <div class="col-xl-5 mx-auto mb-5">
             <p class="ft-normal size-18 text-center">Our solutions are tailored to meet the unique needs of diverse sectors, ensuring that each industry benefits from our specialized approach to video analytics:</p>
           </div>
           <div class="industries__cards--card">
             <div class="row">
-              <div class="col-4">
+              <div class="col-xl-4 col-12">
                 <svg class="svg position-absolute">
                   <clippath id="my-clip-path" clippathunits="objectBoundingBox">
                     <path d="M0.842,0 H0.076 C0.034,0,0,0.048,0,0.107 V0.893 C0,0.952,0.034,1,0.076,1 H0.924 C0.966,1,1,0.952,1,0.893 V0.2 C1,0.167,0.989,0.136,0.971,0.116 L0.889,0.023 C0.875,0.008,0.859,0,0.842,0"></path>
@@ -140,7 +144,7 @@
                   </div>
                 </svg>
               </div>
-              <div class="col-4">
+              <div class="col-xl-4 col-12">
                 <svg class="svg position-absolute">
                   <clippath id="my-clip-path" clippathunits="objectBoundingBox">
                     <path d="M0.842,0 H0.076 C0.034,0,0,0.048,0,0.107 V0.893 C0,0.952,0.034,1,0.076,1 H0.924 C0.966,1,1,0.952,1,0.893 V0.2 C1,0.167,0.989,0.136,0.971,0.116 L0.889,0.023 C0.875,0.008,0.859,0,0.842,0"></path>
@@ -155,7 +159,7 @@
                   </div>
                 </svg>
               </div>
-              <div class="col-4">
+              <div class="col-xl-4 col-12">
                 <svg class="svg position-absolute">
                   <clippath id="my-clip-path" clippathunits="objectBoundingBox">
                     <path d="M0.842,0 H0.076 C0.034,0,0,0.048,0,0.107 V0.893 C0,0.952,0.034,1,0.076,1 H0.924 C0.966,1,1,0.952,1,0.893 V0.2 C1,0.167,0.989,0.136,0.971,0.116 L0.889,0.023 C0.875,0.008,0.859,0,0.842,0"></path>
@@ -180,42 +184,42 @@
       <div class="container"> 
         <div class="choose__cards mt-5 pt-5">
           <div class="row"> 
-            <div class="col-6 mb-5">
+            <div class="col-xl-6 mb-5">
               <div class="choose__cards--card">
-                <div class="col-7 mb-5">
+                <div class="col-7 mb-xl-5 mb-2">
                   <h2 class="size-48 text-white position-relative z-3">Customizable, Cutting-Edge Solutions</h2>
                 </div>
-                <div class="col-8"> 
+                <div class="col-xl-8 col-10">
                   <p class="size-18 fw-lighter text-white position-relative z-3">Each solution is designed to integrate seamlessly into your existing infrastructure and tailored to meet the specific needs of your organization.</p>
                 </div>
               </div>
             </div>
-            <div class="col-6 mb-5">
+            <div class="col-xl-6 mb-5">
               <div class="choose__cards--card">
-                <div class="col-7 mb-5">
+                <div class="col-7 mb-xl-5 mb-2">
                   <h2 class="size-48 text-white position-relative z-3">Quality, Privacy, and Security</h2>
                 </div>
-                <div class="col-8"> 
+                <div class="col-xl-8 col-10">
                   <p class="size-18 fw-lighter text-white position-relative z-3">We prioritize data privacy and security, ensuring all solutions comply with Canadian standards and regulations.</p>
                 </div>
               </div>
             </div>
-            <div class="col-6 mb-5">
+            <div class="col-xl-6 mb-5">
               <div class="choose__cards--card">
-                <div class="col-7 mb-5">
+                <div class="col-7 mb-xl-5 mb-2">
                   <h2 class="size-48 text-white position-relative z-3">Canadian Market Focus</h2>
                 </div>
-                <div class="col-8"> 
+                <div class="col-xl-8 col-10">
                   <p class="size-18 fw-lighter text-white position-relative z-3">As a Canadian company, we understand the unique challenges and opportunities in Canada’s regulatory landscape and local industries.</p>
                 </div>
               </div>
             </div>
-            <div class="col-6 mb-5">
+            <div class="col-xl-6 mb-5">
               <div class="choose__cards--card">
-                <div class="col-7 mb-5">
+                <div class="col-7 mb-xl-5 mb-2">
                   <h2 class="size-48 text-white position-relative z-3">Core Expertise in Cognitive Vision</h2>
                 </div>
-                <div class="col-8"> 
+                <div class="col-xl-8 col-10">
                   <p class="size-18 fw-lighter text-white position-relative z-3">With deep expertise in Cognitive Vision, we deliver intelligent systems that don’t just monitor—they understand and learn from complex visual environments.</p>
                 </div>
               </div>

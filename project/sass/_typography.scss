@@ -8,6 +8,12 @@ body{
   font-family: "Roboto", serif;
   font-size: 48px;
   font-weight: 600;
+  @include max(993){
+    font-size: 38px;
+  }
+  @include max(600){
+    font-size: 35px;
+  }
 }
 
 /*loop font size*/

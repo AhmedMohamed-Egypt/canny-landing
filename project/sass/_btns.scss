@@ -9,6 +9,11 @@ button{
     width: 165px;
     padding: 12px 0;
     border-radius: 6px;
+    @include max(768){
+        font-size: 12px;
+        width: 110px;
+        padding: 10px 0;
+    }
     
 }
 

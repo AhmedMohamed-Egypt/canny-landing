@@ -14,8 +14,22 @@
                 -webkit-clip-path: url(#my-clip-path);
                 clip-path: url(#my-clip-path);
                 color: #fff;
+                @include max(992){
+                   max-width: 70%;
+                   margin: auto;
+                   margin-bottom: 25px;
+                }
+                @include max(768){
+                    max-width: 100%;
+               
+                 }
                 h2{
                     line-height: 1.1;
+                }
+                p{
+                    @include max(1300){
+                        font-size: 16px;
+                    }
                 }
              
                 .icon{
