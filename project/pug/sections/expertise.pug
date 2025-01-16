@@ -1,10 +1,34 @@
-- var cards =  [{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.'},{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.'},{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.'}]
+- var cards =  [{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.',class:'motion'},{title:'Object Classification',text:'Identify and classify objects with precision, enabling actionable insights across various applications.',class:'object'},{title:'Behavior Tracking',text:'Track behaviors to enhance understanding of patterns and identify anomalies.',class:'track'}]
 .expertise
  .container-3  
   h2(class="h2-heading text-center") Our Expertise 
   p(class="ft-normal size-18 text-center") Innovative VideoAnalytics Solutions
   .expertise__slider.mt-5
-   .swiper.swiper-container
+   .glide
+    .glide__track(data-glide-el='track')
+      div.glide__slides
+       each val in cards  
+        div.glide__slide
+         div(class=`expertise__card ${val.class}`)
+          span.expertise__card--before.d-block
+          .expertise__content 
+           .col-6
+            h2(class="text-white position-relative z-3 size-45 mb-3")=val.title 
+           .col-lg-7.col-12.expertise__card--txt
+            p(class="fw-lighter text-white position-relative z-3 size-17")=val.text
+          span.expertise__card--after.d-block
+        
+    .glide
+      .glide__arrows(data-glide-el='controls')
+        button.glide__arrow.glide__arrow--prev(data-glide-dir='<') 
+        button.glide__arrow.glide__arrow--next(data-glide-dir='>') 
+      .glide__bullets(data-glide-el='controls[nav]')
+        button.glide__bullet(data-glide-dir='=0')
+        button.glide__bullet(data-glide-dir='=1')
+        button.glide__bullet(data-glide-dir='=2')
+
+   
+//.swiper.swiper-container
     .swiper-wrapper
      each val in cards  
       .swiper-slide
@@ -18,6 +42,3 @@
   .swiper-pagination
     .swiper-button-prev
     .swiper-button-next
-   
-
-  

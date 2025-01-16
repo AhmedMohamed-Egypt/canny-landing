@@ -1,56 +1,148 @@
-.expertise{
+.expertise {
   margin-top: 150px;
-    &__slider{
-        height: 325px;
-    }
-    &__card{
-      //  padding: 160px 0;
-        max-width: 100%;
-        margin: auto;
-        position: relative;
-        border-radius: 15px;
-        border: 1px solid $black;
-        overflow: hidden;
-        height: 100%;
-       
+  &__slider {
+    
+  }
+  &__card {
+    //  padding: 160px 0;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    border-radius: 15px;
+  //  border: 1px solid $black;
+    overflow: hidden;
+    height: 100%;
+    padding: 60px 0;
 
-        &::after{
-            @include after();
-             
-             background-image: linear-gradient(270deg, rgba(12, 15, 22, 0) 0%, #0C0F16 46%);
-             
+    &.motion {
+        .expertise__card--before{
+        background: linear-gradient(
+            270deg,
+            rgba(12, 15, 22, 0.8) 0%,
+            #0c0f16 100%
+          ),
+          url("../images/motion.png");
+          @include max(768){
+            background: linear-gradient(
+                270deg,
+                rgba(12, 15, 22, 1) 0%,
+                #0c0f16 100%
+              ),
+              url("../images/motion.png");
+          }
+      }
+    }
+    &.track {
+        .expertise__card--before {
+        background: linear-gradient(
+            270deg,
+            rgba(12, 15, 22, 0.8) 0%,
+            #0c0f16 100%
+          ),
+          url("../images/tr.png");
+          @include max(768){
+            background: linear-gradient(
+                270deg,
+                rgba(12, 15, 22, 1) 0%,
+                #0c0f16 100%
+              ),
+              url("../images/tr.png");
+          }
+      }
+    }
+    &.object {
+     .expertise__card--before {
+        background: linear-gradient(
+            270deg,
+            rgba(12, 15, 22, 0.8) 0%,
+            #0c0f16 100%
+          ),
+          url("../images/classify.png");
+      //  background-size: 70% !important;
+      @include max(768){
+        background: linear-gradient(
+            270deg,
+            rgba(12, 15, 22, 1) 0%,
+            #0c0f16 100%
+          ),
+          url("../images/classify.png");
+          background-size:cover !important;
+      }
+      
+      }
+    }
+
+    .expertise__card--after{
+      @include after();
+
+      background-image: linear-gradient(
+        270deg,
+        rgba(12, 15, 22, 0) 0%,
+        #0c0f16 46%
+      );
+      @include max(768){
+        background-image: linear-gradient(180deg, rgba(12, 15, 22, 0) 30%, #0c0f16 44%)
+      }
+    }
+    .expertise__card--before{
+      @include before();
+      background-repeat: no-repeat !important;
+      background-position: right !important;
+      background-blend-mode: color-dodge !important;
+      @include max(768){
+        background-size:cover !important;
+        height: 180px;
+      }
+    }
+  }
+  &__content {
+    position: absolute;
+    z-index: 999999999;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    @include max(768){
+        top: auto;
+        bottom: 25px;
+        padding-left: 20px;
+    }
+    @include max(450){
+      
+        padding-left: 10px;
+    }
+    h2{
+        @include max(768){
+            font-size: 36px;
+
+        }
+        @include max(450){
+            transform: scaleX(.9);
+           
+        }
+    }
+    p{
+        @include max(768){
+            font-size: 16px;
+          
             
         }
-        &::before{
-            
-            @include before();
-            background: -webkit-gradient(linear, right top, left top, color-stop(23.5%, rgba(12, 15, 22, 0)), color-stop(62.33%, #0C0F16)),url("../images/motion.png");
-            background: linear-gradient(270deg, rgba(12, 15, 22, .8) 0%, #0C0F16 100%),url("../images/motion.png");
-            background-repeat: no-repeat;
-            background-position: right;
-            background-blend-mode: color-dodge;
-            
+        @include max(450){
+            transform: scaleX(.9);
+           
         }
     }
-    &__content {
-        position: absolute;
-        z-index: 999999999;
-        left: 0;
-        bottom: 0;
-        margin: auto;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 30px;
-    }
-    .swiper {
-        height: 100%;
-    }
-    .swiper-wrapper{
-        align-items: center;
-    }
-    .swiper-slide-active{
+  }
+ 
+  .swiper-wrapper {
+    //   align-items: center;
+  }
+  .swiper-slide-active {
+    /*
     width: calc(50% + 280px) !important;
     transform: translate(-140px);
       .expertise__card{
@@ -59,9 +151,10 @@
         transform-origin: top;
         
       }
-      
-    }
-    .swiper-slide:not(.swiper-slide-active){
+      */
+  }
+  .swiper-slide:not(.swiper-slide-active) {
+    /*
         height: 85%;
        &.swiper-slide-prev{
         transform: translate(-140px);
@@ -94,9 +187,57 @@
            
     
         }
-    }
-    .swiper-pagination{
-    @extend %pagination;
-    }
-
+        */
+  }
 }
+
+.glide__arrows {
+  @extend %pagination;
+}
+.glide__slide {
+    z-index: -1;
+    position: relative;
+   transition: transform .25s;
+   height: 275px;
+   
+    
+   @include max(450){
+       height: 375px;
+      
+   }
+  &::after{
+    @include after();
+    display: none;
+    @include max(450){
+       display: block;
+        background-color: rgba(#fff,.5);
+    }
+  
+  }
+
+    
+  .expertise__card {
+   
+  }
+}
+.glide__slide--active {
+  height: 300px;
+  @include max(450){
+      height: 410px;
+      transform: scaleX(1.25)
+  }
+    &::after{
+        display: none;
+    }
+  .expertise__card {
+  
+  }
+ // transform: rotate3d(1, 1, 1, 0deg) scaleX(1.5);
+  margin: 0px;
+  z-index: 999999999999999;
+}
+.glide__slides {
+  align-items: center;
+}
+
+

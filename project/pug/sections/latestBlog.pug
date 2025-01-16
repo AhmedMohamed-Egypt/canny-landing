@@ -1,4 +1,4 @@
-- var cards = [{title:'Contrary to popular beliefI psum is not simply random',img:'images/blog-1.svg'},{title:'Contrary to popular beliefI psum is not simply random',img:'images/blog-2.svg'},{title:'Contrary to popular beliefI psum is not simply random',img:'images/blog-3.svg'}]
+- var cards = [{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-1.svg'},{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-2.svg'},{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-3.svg'}]
 
 
 .latestBlog 
@@ -12,9 +12,11 @@
        .latestBlog__swiper--card
         img(src=`${val.img}` class="position-relative top-1 w-100")
         div(class="latestBlog__swiper--card--body")
-         div(class="d-flex align-items-center mb-3")
-          img(src="/images/person.svg")
-          p(class="text-white fw-normal size-17 ms-2") Dec 2 , 2024
+         div(class="d-flex align-items-center mb-1")
+          <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M3.1372 2.43794V0.742396C3.1372 0.371498 3.42862 0.0800781 3.79952 0.0800781C4.17042 0.0800781 4.46184 0.371498 4.46184 0.742396V2.43794C4.46184 2.80883 4.17042 3.10025 3.79952 3.10025C3.42862 3.10025 3.1372 2.80883 3.1372 2.43794ZM8.03835 3.10025C8.40925 3.10025 8.70067 2.80883 8.70067 2.43794V0.742396C8.70067 0.371498 8.40925 0.0800781 8.03835 0.0800781C7.66745 0.0800781 7.37604 0.371498 7.37604 0.742396V2.43794C7.37604 2.80883 7.66745 3.10025 8.03835 3.10025ZM3.56109 5.37862H8.26354C8.55496 5.37862 8.7934 5.14018 8.7934 4.84876C8.7934 4.55734 8.55496 4.31891 8.26354 4.31891H3.56109C3.26967 4.31891 3.03123 4.55734 3.03123 4.84876C3.03123 5.14018 3.26967 5.37862 3.56109 5.37862ZM10.9525 1.00732H9.8531C9.56168 1.00732 9.32325 1.24576 9.32325 1.53718C9.32325 1.8286 9.56168 2.06703 9.8531 2.06703H10.4227V11.0745H1.41518V2.06703H1.98477C2.27619 2.06703 2.51462 1.8286 2.51462 1.53718C2.51462 1.24576 2.27619 1.00732 1.98477 1.00732H0.885323C0.593903 1.00732 0.355469 1.29873 0.355469 1.59015V11.6044C0.355469 11.8958 0.593903 12.1343 0.885323 12.1343H10.9525C11.244 12.1343 11.4824 11.8958 11.4824 11.6044V1.59015C11.4824 1.29873 11.244 1.00732 10.9525 1.00732ZM5.48181 2.06703H6.35606C6.64748 2.06703 6.88592 1.8286 6.88592 1.53718C6.88592 1.24576 6.64748 1.00732 6.35606 1.00732H5.48181C5.19039 1.00732 4.95195 1.24576 4.95195 1.53718C4.95195 1.8286 5.19039 2.06703 5.48181 2.06703ZM3.56109 7.76296H8.26354C8.55496 7.76296 8.7934 7.52453 8.7934 7.23311C8.7934 6.94169 8.55496 6.70325 8.26354 6.70325H3.56109C3.26967 6.70325 3.03123 6.94169 3.03123 7.23311C3.03123 7.52453 3.26967 7.76296 3.56109 7.76296Z" fill="white"/>
+          </svg>
+          p(class="text-white fw-normal size-17 ms-2") 15 sep 2024
          h2(class="w-700 size-22 text-white")=val.title
   .swiper-pagination
     .swiper-button-prev
