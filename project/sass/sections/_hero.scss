@@ -20,7 +20,9 @@ height: 100vh;
     }
    // height: 600px;
     &_content{
-        padding: 130px 0;
+        @include cntrElmnt();
+        position: absolute !important;
+        width: 100%;
         @include max(600){
             padding: 50px 0;
         }

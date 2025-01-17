@@ -1,5 +1,7 @@
 .choose{
     &__cards{
+        position: relative;
+        z-index: 9999999999999;
         @for $i from 1 through  4{
             .row{
                 >div:nth-child(#{$i}){
@@ -9,6 +11,9 @@
                         
                         background: linear-gradient(270deg, rgba(12, 15, 22, .9) 0%, rgba(#0C0F16,1) 53%), url('../images/choose-#{$i}.svg'); ;
                     }
+                  }
+                  &:last-child{
+                    margin-bottom: 0 !important;
                   }
                 }
 

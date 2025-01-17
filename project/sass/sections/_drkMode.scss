@@ -1,0 +1,75 @@
+body {
+  &.dark-mode {
+    background-color: #06070e;
+    .h2-heading {
+      color: #b5b5bd;
+    }
+    p {
+      color: #b5b5bd;
+    }
+    .industries p {
+      color: #fff;
+    }
+    .about-section__widget::after {
+      background: linear-gradient(90deg, #0c0f16 57%, rgba(12, 15, 22, 0) 75%);
+      @include max(768) {
+        background: linear-gradient(
+          180deg,
+          #0c0f16 68%,
+          rgba(12, 15, 22, 0) 78%
+        );
+      }
+    }
+    .overlay-product-about::before {
+      background: #ffbf00;
+      opacity: 0.08;
+      -webkit-filter: blur(188.6px);
+      filter: blur(188.6px);
+      width: 50%;
+      height: 50%;
+      right: 0;
+      left: auto;
+      background: #ed1a37;
+      opacity: 0.1;
+      filter: blur(188.6px);
+    }
+    .overlay-product-about--pesdu,
+    .overlay-product-about::after {
+      display: none;
+    }
+    .expertise {
+      position: relative;
+      &__slider {
+        position: relative;
+        z-index: 99;
+      }
+      &::after {
+        @include after();
+        background: #a0ac4f;
+        opacity: 0.1;
+        filter: blur(188.6px);
+        width: 25%;
+      }
+    }
+    .choose {
+        position: relative;
+      &::after {
+        @include after();
+        background: #ed1a37;
+        opacity: .1;
+        -webkit-filter: blur(188.6px);
+        filter: blur(188.6px);
+        width: 50%;
+        right: 0;
+        left: auto;
+        height: 50%;
+        top: -30%;
+      }
+    }
+  }
+}
+
+//background: linear-gradient(90deg, #0C0F16 14.32%, rgba(12, 15, 22, 0) 95.68%);
+/* Ellipse 25 */
+
+/* Ellipse 25 */

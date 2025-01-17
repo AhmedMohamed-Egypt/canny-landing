@@ -1,33 +1,71 @@
+
 var mySwiper = new Swiper(".expertise .swiper-container", {
   spaceBetween: 0,
-  slidesPerView: 3,
+  slidesPerView: 1.6,
   centeredSlides: true,
   loop: true,
+ 
   navigation: {
     nextEl: ".expertise .swiper-button-next",
     prevEl: ".expertise .swiper-button-prev",
   },
+  breakpoints: {
+    768:{
+      slidesPerView: 1.4,
+    }
+    /*
+    768:{
+     slidesPerView: 1.5,
+    },
+   991: {
+    // slidesPerView: 1.5,
+    
+   },
+   992: {
+     slidesPerView: 3,
+   
+   },
+   1200: {
+     slidesPerView: 3,
+   },
+   2700:{
+     slidesPerView: 1,
+   }
+   */
+ },
 });
 
-var mySwiperBlog = new Swiper(".latestBlog .swiper-container", {
-  spaceBetween: 0,
-  slidesPerView: 3,
 
+var mySwiperBlog = new Swiper(".latestBlog .swiper-container", {
+  spaceBetween: 20,
+  slidesPerView: 3,
+  centeredSlides: true,
   loop: true,
+ 
+  
+
   navigation: {
     nextEl: ".latestBlog .swiper-button-next",
     prevEl: ".latestBlog .swiper-button-prev",
   },
   breakpoints: {
-    375: {
-      slidesPerView: 1,
+     768:{
+      slidesPerView: 1.5,
+     },
+    991: {
+     // slidesPerView: 1.5,
+     
     },
     992: {
-      slidesPerView: 2,
+      slidesPerView: 3,
+    
     },
     1200: {
       slidesPerView: 3,
     },
+    2700:{
+      slidesPerView: 3,
+    }
   },
 });
 
@@ -102,30 +140,27 @@ new Glide(".glide", {
 }).mount();
 
 */
-window.addEventListener('load', function () {
-  new Glide('.glide', {
-    gap:0,
+/*
+window.addEventListener("load", function () {
+  new Glide(".glide", {
+    gap: 0,
     type: "carousel",
-    animationDuration:600,
-   peek:100,
+    animationDuration: 400,
+    peek: 300,
     perView: 1,
     breakpoints: {
       300: {
         peek: 100,
-       
       },
       400: {
         peek: 70,
-       
       },
 
       500: {
         peek: 80,
-       
       },
       600: {
         peek: 50,
-       
       },
       700: {
         peek: 80,
@@ -133,7 +168,7 @@ window.addEventListener('load', function () {
       900: {
         peek: 90,
       },
-  
+
       1200: {
         peek: 110,
       },
@@ -142,7 +177,9 @@ window.addEventListener('load', function () {
       },
       1400: {
         peek: 120,
-      }
+      },
     },
   }).mount();
-}); 
+});
+
+*/

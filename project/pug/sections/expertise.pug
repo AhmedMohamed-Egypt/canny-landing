@@ -1,9 +1,46 @@
 - var cards =  [{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.',class:'motion'},{title:'Object Classification',text:'Identify and classify objects with precision, enabling actionable insights across various applications.',class:'object'},{title:'Behavior Tracking',text:'Track behaviors to enhance understanding of patterns and identify anomalies.',class:'track'}]
-.expertise
+.expertise.no-m-p
  .container-3  
   h2(class="h2-heading text-center") Our Expertise 
   p(class="ft-normal size-18 text-center") Innovative VideoAnalytics Solutions
   .expertise__slider.mt-5
+   .swiper.swiper-container
+    .swiper-wrapper
+     each val in cards  
+      .swiper-slide
+       div(class=`expertise__card ${val.class}`)
+        span.expertise__card--before.d-block
+        .expertise__content 
+         .col-6
+          h2(class="text-white position-relative z-3 size-45 mb-3")=val.title 
+         .col-xl-7.expertise__card--txt
+          p(class="fw-lighter text-white position-relative z-3 size-17")=val.text
+        span.expertise__card--after.d-block
+        
+  .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //
    .glide
     .glide__track(data-glide-el='track')
       div.glide__slides

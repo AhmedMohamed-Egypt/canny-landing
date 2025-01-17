@@ -149,7 +149,8 @@ a {
   display: flex;
   justify-content: center;
   width: 120px;
-  margin:50px auto;
+  margin: auto;
+  margin-bottom: 25px;
 
   justify-content: space-between;
   .swiper-button-prev,.swiper-button-next,.glide__arrow--prev,.glide__arrow--next{
@@ -186,5 +187,11 @@ a {
       }
   }
 }
-
+.no-m-p{
+  @include max(1199){
+   margin-top: 50px !important;
+   padding-top: 0 !important;
+   padding-bottom: 0 !important;
+  }
+}
 /*helpers for sections*/

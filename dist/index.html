@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/css/glide.core.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body> 
+  <body class="dark-mode"> 
     <div class="hero bg-cover bg-center position-relative"><video autoplay muted loop id="myVideo"> <source src="/images/landing-page-video-canny-vision.mp4" type="video/mp4"></video>
       <div class="hero__nav py-4 position-relative">
         <div class="container"> 
@@ -46,7 +46,7 @@
             <div class="about-section__widget--before"></div>
             <div>
               <h2 class="mb-4 h2-heading text-white position-relative z-3">About Us </h2>
-              <div class="col-xl-6 about-section__widget--txt">
+              <div class="col-lg-6 about-section__widget--txt">
                 <p class="mb-4 size-18  fw-lighter text-white position-relative z-3"><b>Canny Vision</b> is a Canadian startup delivering <b>customizable AI solutions</b> in motion detection, object classification, behavior tracking, <b>incident detection, and traffic monitoring</b>. With a strong commitment to <b>quality, privacy, and security</b>, our team of experts harnesses the latest advancements in <b>Cognitive Vision and Video Analytics</b> to provide reliable, scalable solutions across key industries.</p>
                 <p class="size-18  fw-lighter text-white position-relative z-3">Focused exclusively on the Canadian market, Canny Vision stands at the forefront of video analytics technology, helping organizations elevate their security, efficiency, and intelligence.</p>
               </div>
@@ -54,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="product-section mt-5 pt-5">
+      <div class="product-section mt-5 pt-5 no-m-p">
         <div class="container"> 
           <div class="row align-items-center">
             <div class="col-xl-6">
@@ -69,65 +69,82 @@
         </div>
       </div>
     </div>
-    <div class="expertise">
+    <div class="expertise no-m-p">
       <div class="container-3"> 
         <h2 class="h2-heading text-center">Our Expertise </h2>
         <p class="ft-normal size-18 text-center">Innovative VideoAnalytics Solutions</p>
         <div class="expertise__slider mt-5">
-          <div class="glide">
-            <div class="glide__track" data-glide-el="track">
-              <div class="glide__slides">
-                <div class="glide__slide">
-                  <div class="expertise__card motion"><span class="expertise__card--before d-block"></span>
-                    <div class="expertise__content"> 
-                      <div class="col-6">
-                        <h2 class="text-white position-relative z-3 size-45 mb-3">Motion Detection</h2>
-                      </div>
-                      <div class="col-lg-7 col-12 expertise__card--txt">
-                        <p class="fw-lighter text-white position-relative z-3 size-17">Capture and analyze movement patterns for enhanced security and automation.</p>
-                      </div>
-                    </div><span class="expertise__card--after d-block"></span>
-                  </div>
-                </div>
-                <div class="glide__slide">
-                  <div class="expertise__card object"><span class="expertise__card--before d-block"></span>
-                    <div class="expertise__content"> 
-                      <div class="col-6">
-                        <h2 class="text-white position-relative z-3 size-45 mb-3">Object Classification</h2>
-                      </div>
-                      <div class="col-lg-7 col-12 expertise__card--txt">
-                        <p class="fw-lighter text-white position-relative z-3 size-17">Identify and classify objects with precision, enabling actionable insights across various applications.</p>
-                      </div>
-                    </div><span class="expertise__card--after d-block"></span>
-                  </div>
-                </div>
-                <div class="glide__slide">
-                  <div class="expertise__card track"><span class="expertise__card--before d-block"></span>
-                    <div class="expertise__content"> 
-                      <div class="col-6">
-                        <h2 class="text-white position-relative z-3 size-45 mb-3">Behavior Tracking</h2>
-                      </div>
-                      <div class="col-lg-7 col-12 expertise__card--txt">
-                        <p class="fw-lighter text-white position-relative z-3 size-17">Track behaviors to enhance understanding of patterns and identify anomalies.</p>
-                      </div>
-                    </div><span class="expertise__card--after d-block"></span>
-                  </div>
+          <div class="swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="expertise__card motion"><span class="expertise__card--before d-block"></span>
+                  <div class="expertise__content"> 
+                    <div class="col-6">
+                      <h2 class="text-white position-relative z-3 size-45 mb-3">Motion Detection</h2>
+                    </div>
+                    <div class="col-xl-7 expertise__card--txt">
+                      <p class="fw-lighter text-white position-relative z-3 size-17">Capture and analyze movement patterns for enhanced security and automation.</p>
+                    </div>
+                  </div><span class="expertise__card--after d-block"></span>
                 </div>
               </div>
-            </div>
-            <div class="glide">
-              <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--prev" data-glide-dir="&lt;"> </button>
-                <button class="glide__arrow glide__arrow--next" data-glide-dir="&gt;"> </button>
+              <div class="swiper-slide">
+                <div class="expertise__card object"><span class="expertise__card--before d-block"></span>
+                  <div class="expertise__content"> 
+                    <div class="col-6">
+                      <h2 class="text-white position-relative z-3 size-45 mb-3">Object Classification</h2>
+                    </div>
+                    <div class="col-xl-7 expertise__card--txt">
+                      <p class="fw-lighter text-white position-relative z-3 size-17">Identify and classify objects with precision, enabling actionable insights across various applications.</p>
+                    </div>
+                  </div><span class="expertise__card--after d-block"></span>
+                </div>
               </div>
-              <div class="glide__bullets" data-glide-el="controls[nav]">
-                <button class="glide__bullet" data-glide-dir="=0"></button>
-                <button class="glide__bullet" data-glide-dir="=1"></button>
-                <button class="glide__bullet" data-glide-dir="=2"></button>
+              <div class="swiper-slide">
+                <div class="expertise__card track"><span class="expertise__card--before d-block"></span>
+                  <div class="expertise__content"> 
+                    <div class="col-6">
+                      <h2 class="text-white position-relative z-3 size-45 mb-3">Behavior Tracking</h2>
+                    </div>
+                    <div class="col-xl-7 expertise__card--txt">
+                      <p class="fw-lighter text-white position-relative z-3 size-17">Track behaviors to enhance understanding of patterns and identify anomalies.</p>
+                    </div>
+                  </div><span class="expertise__card--after d-block"></span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="swiper-pagination">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <!--
+        .glide
+         .glide__track(data-glide-el='track')
+           div.glide__slides
+            each val in cards  
+             div.glide__slide
+              div(class=`expertise__card ${val.class}`)
+               span.expertise__card--before.d-block
+               .expertise__content 
+                .col-6
+                 h2(class="text-white position-relative z-3 size-45 mb-3")=val.title 
+                .col-lg-7.col-12.expertise__card--txt
+                 p(class="fw-lighter text-white position-relative z-3 size-17")=val.text
+               span.expertise__card--after.d-block
+             
+         .glide
+           .glide__arrows(data-glide-el='controls')
+             button.glide__arrow.glide__arrow--prev(data-glide-dir='<') 
+             button.glide__arrow.glide__arrow--next(data-glide-dir='>') 
+           .glide__bullets(data-glide-el='controls[nav]')
+             button.glide__bullet(data-glide-dir='=0')
+             button.glide__bullet(data-glide-dir='=1')
+             button.glide__bullet(data-glide-dir='=2')
+        
+        
+        -->
       </div>
     </div>
     <!--.swiper.swiper-container
@@ -145,7 +162,7 @@
       .swiper-button-prev
       .swiper-button-next
     -->
-    <div class="industries"> 
+    <div class="industries no-m-p">
       <div class="container"> 
         <div class="industries__cards"> 
           <h2 class="h2-heading text-center mb-3">Industries</h2>
@@ -204,14 +221,14 @@
         </div>
       </div>
     </div>
-    <div class="choose"> 
+    <div class="choose no-m-p">
       <h2 class="h2-heading text-center mb-5">Why Choose Canny Vision?</h2>
       <div class="container"> 
         <div class="choose__cards mt-5 pt-5">
           <div class="row"> 
-            <div class="col-xl-6 mb-5">
+            <div class="col-lg-6 mb-5">
               <div class="choose__cards--card">
-                <div class="col-7 mb-xl-5 mb-2">
+                <div class="col-xl-7 mb-xl-5 mb-2">
                   <h2 class="size-48 text-white position-relative z-3">Customizable, Cutting-Edge Solutions</h2>
                 </div>
                 <div class="col-xl-8 col-10">
@@ -219,9 +236,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-6 mb-5">
+            <div class="col-lg-6 mb-5">
               <div class="choose__cards--card">
-                <div class="col-7 mb-xl-5 mb-2">
+                <div class="col-xl-7 mb-xl-5 mb-2">
                   <h2 class="size-48 text-white position-relative z-3">Quality, Privacy, and Security</h2>
                 </div>
                 <div class="col-xl-8 col-10">
@@ -229,9 +246,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-6 mb-5">
+            <div class="col-lg-6 mb-5">
               <div class="choose__cards--card">
-                <div class="col-7 mb-xl-5 mb-2">
+                <div class="col-xl-7 mb-xl-5 mb-2">
                   <h2 class="size-48 text-white position-relative z-3">Canadian Market Focus</h2>
                 </div>
                 <div class="col-xl-8 col-10">
@@ -239,9 +256,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-6 mb-5">
+            <div class="col-lg-6 mb-5">
               <div class="choose__cards--card">
-                <div class="col-7 mb-xl-5 mb-2">
+                <div class="col-xl-7 mb-xl-5 mb-2">
                   <h2 class="size-48 text-white position-relative z-3">Core Expertise in Cognitive Vision</h2>
                 </div>
                 <div class="col-xl-8 col-10">
@@ -253,45 +270,54 @@
         </div>
       </div>
     </div>
-    <div class="latestBlog"> 
-      <div class="container"> 
-        <h2 class="h2-heading text-center mb-5">Our Latest Blog </h2>
-        <div class="latestBlog__swiper"> 
+    <div class="latestBlog no-m-p">
+      <div class="container-non">
+        <h2 class="h2-heading text-center mb-xl-5">Our Latest Blog </h2>
+        <div class="latestBlog__swiper mb-lg-5">
           <div class="swiper swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="latestBlog__swiper--card"><img class="position-relative top-1 w-100" src="images/blog-1.svg">
+                <div class="latestBlog__swiper--card"><img class="position-relative w-100" src="images/blog-1.png">
                   <div class="latestBlog__swiper--card--body">
                     <div class="d-flex align-items-center mb-1"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.1372 2.43794V0.742396C3.1372 0.371498 3.42862 0.0800781 3.79952 0.0800781C4.17042 0.0800781 4.46184 0.371498 4.46184 0.742396V2.43794C4.46184 2.80883 4.17042 3.10025 3.79952 3.10025C3.42862 3.10025 3.1372 2.80883 3.1372 2.43794ZM8.03835 3.10025C8.40925 3.10025 8.70067 2.80883 8.70067 2.43794V0.742396C8.70067 0.371498 8.40925 0.0800781 8.03835 0.0800781C7.66745 0.0800781 7.37604 0.371498 7.37604 0.742396V2.43794C7.37604 2.80883 7.66745 3.10025 8.03835 3.10025ZM3.56109 5.37862H8.26354C8.55496 5.37862 8.7934 5.14018 8.7934 4.84876C8.7934 4.55734 8.55496 4.31891 8.26354 4.31891H3.56109C3.26967 4.31891 3.03123 4.55734 3.03123 4.84876C3.03123 5.14018 3.26967 5.37862 3.56109 5.37862ZM10.9525 1.00732H9.8531C9.56168 1.00732 9.32325 1.24576 9.32325 1.53718C9.32325 1.8286 9.56168 2.06703 9.8531 2.06703H10.4227V11.0745H1.41518V2.06703H1.98477C2.27619 2.06703 2.51462 1.8286 2.51462 1.53718C2.51462 1.24576 2.27619 1.00732 1.98477 1.00732H0.885323C0.593903 1.00732 0.355469 1.29873 0.355469 1.59015V11.6044C0.355469 11.8958 0.593903 12.1343 0.885323 12.1343H10.9525C11.244 12.1343 11.4824 11.8958 11.4824 11.6044V1.59015C11.4824 1.29873 11.244 1.00732 10.9525 1.00732ZM5.48181 2.06703H6.35606C6.64748 2.06703 6.88592 1.8286 6.88592 1.53718C6.88592 1.24576 6.64748 1.00732 6.35606 1.00732H5.48181C5.19039 1.00732 4.95195 1.24576 4.95195 1.53718C4.95195 1.8286 5.19039 2.06703 5.48181 2.06703ZM3.56109 7.76296H8.26354C8.55496 7.76296 8.7934 7.52453 8.7934 7.23311C8.7934 6.94169 8.55496 6.70325 8.26354 6.70325H3.56109C3.26967 6.70325 3.03123 6.94169 3.03123 7.23311C3.03123 7.52453 3.26967 7.76296 3.56109 7.76296Z" fill="white"/>
 </svg>
                       <p class="text-white fw-normal size-17 ms-2">15 sep 2024</p>
                     </div>
-                    <h2 class="w-700 size-22 text-white">Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.</h2>
+                    <h2 class="w-500 size-16 text-white">Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.</h2><a class="d-flex align-items-center mt-2" href="#"> <span class="w-500 size-16 text-white">Read More </span><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.17773 10.3994H16.8208" stroke="white" stroke-width="1.24028" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.2383 4.81836L16.8195 10.3996L11.2383 15.9809" stroke="white" stroke-width="1.24028" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="latestBlog__swiper--card"><img class="position-relative top-1 w-100" src="images/blog-2.svg">
+                <div class="latestBlog__swiper--card"><img class="position-relative w-100" src="images/blog-3.png">
                   <div class="latestBlog__swiper--card--body">
                     <div class="d-flex align-items-center mb-1"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.1372 2.43794V0.742396C3.1372 0.371498 3.42862 0.0800781 3.79952 0.0800781C4.17042 0.0800781 4.46184 0.371498 4.46184 0.742396V2.43794C4.46184 2.80883 4.17042 3.10025 3.79952 3.10025C3.42862 3.10025 3.1372 2.80883 3.1372 2.43794ZM8.03835 3.10025C8.40925 3.10025 8.70067 2.80883 8.70067 2.43794V0.742396C8.70067 0.371498 8.40925 0.0800781 8.03835 0.0800781C7.66745 0.0800781 7.37604 0.371498 7.37604 0.742396V2.43794C7.37604 2.80883 7.66745 3.10025 8.03835 3.10025ZM3.56109 5.37862H8.26354C8.55496 5.37862 8.7934 5.14018 8.7934 4.84876C8.7934 4.55734 8.55496 4.31891 8.26354 4.31891H3.56109C3.26967 4.31891 3.03123 4.55734 3.03123 4.84876C3.03123 5.14018 3.26967 5.37862 3.56109 5.37862ZM10.9525 1.00732H9.8531C9.56168 1.00732 9.32325 1.24576 9.32325 1.53718C9.32325 1.8286 9.56168 2.06703 9.8531 2.06703H10.4227V11.0745H1.41518V2.06703H1.98477C2.27619 2.06703 2.51462 1.8286 2.51462 1.53718C2.51462 1.24576 2.27619 1.00732 1.98477 1.00732H0.885323C0.593903 1.00732 0.355469 1.29873 0.355469 1.59015V11.6044C0.355469 11.8958 0.593903 12.1343 0.885323 12.1343H10.9525C11.244 12.1343 11.4824 11.8958 11.4824 11.6044V1.59015C11.4824 1.29873 11.244 1.00732 10.9525 1.00732ZM5.48181 2.06703H6.35606C6.64748 2.06703 6.88592 1.8286 6.88592 1.53718C6.88592 1.24576 6.64748 1.00732 6.35606 1.00732H5.48181C5.19039 1.00732 4.95195 1.24576 4.95195 1.53718C4.95195 1.8286 5.19039 2.06703 5.48181 2.06703ZM3.56109 7.76296H8.26354C8.55496 7.76296 8.7934 7.52453 8.7934 7.23311C8.7934 6.94169 8.55496 6.70325 8.26354 6.70325H3.56109C3.26967 6.70325 3.03123 6.94169 3.03123 7.23311C3.03123 7.52453 3.26967 7.76296 3.56109 7.76296Z" fill="white"/>
 </svg>
                       <p class="text-white fw-normal size-17 ms-2">15 sep 2024</p>
                     </div>
-                    <h2 class="w-700 size-22 text-white">Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.</h2>
+                    <h2 class="w-500 size-16 text-white">Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.</h2><a class="d-flex align-items-center mt-2" href="#"> <span class="w-500 size-16 text-white">Read More </span><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.17773 10.3994H16.8208" stroke="white" stroke-width="1.24028" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.2383 4.81836L16.8195 10.3996L11.2383 15.9809" stroke="white" stroke-width="1.24028" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="latestBlog__swiper--card"><img class="position-relative top-1 w-100" src="images/blog-3.svg">
+                <div class="latestBlog__swiper--card"><img class="position-relative w-100" src="images/blog-2.png">
                   <div class="latestBlog__swiper--card--body">
                     <div class="d-flex align-items-center mb-1"><svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.1372 2.43794V0.742396C3.1372 0.371498 3.42862 0.0800781 3.79952 0.0800781C4.17042 0.0800781 4.46184 0.371498 4.46184 0.742396V2.43794C4.46184 2.80883 4.17042 3.10025 3.79952 3.10025C3.42862 3.10025 3.1372 2.80883 3.1372 2.43794ZM8.03835 3.10025C8.40925 3.10025 8.70067 2.80883 8.70067 2.43794V0.742396C8.70067 0.371498 8.40925 0.0800781 8.03835 0.0800781C7.66745 0.0800781 7.37604 0.371498 7.37604 0.742396V2.43794C7.37604 2.80883 7.66745 3.10025 8.03835 3.10025ZM3.56109 5.37862H8.26354C8.55496 5.37862 8.7934 5.14018 8.7934 4.84876C8.7934 4.55734 8.55496 4.31891 8.26354 4.31891H3.56109C3.26967 4.31891 3.03123 4.55734 3.03123 4.84876C3.03123 5.14018 3.26967 5.37862 3.56109 5.37862ZM10.9525 1.00732H9.8531C9.56168 1.00732 9.32325 1.24576 9.32325 1.53718C9.32325 1.8286 9.56168 2.06703 9.8531 2.06703H10.4227V11.0745H1.41518V2.06703H1.98477C2.27619 2.06703 2.51462 1.8286 2.51462 1.53718C2.51462 1.24576 2.27619 1.00732 1.98477 1.00732H0.885323C0.593903 1.00732 0.355469 1.29873 0.355469 1.59015V11.6044C0.355469 11.8958 0.593903 12.1343 0.885323 12.1343H10.9525C11.244 12.1343 11.4824 11.8958 11.4824 11.6044V1.59015C11.4824 1.29873 11.244 1.00732 10.9525 1.00732ZM5.48181 2.06703H6.35606C6.64748 2.06703 6.88592 1.8286 6.88592 1.53718C6.88592 1.24576 6.64748 1.00732 6.35606 1.00732H5.48181C5.19039 1.00732 4.95195 1.24576 4.95195 1.53718C4.95195 1.8286 5.19039 2.06703 5.48181 2.06703ZM3.56109 7.76296H8.26354C8.55496 7.76296 8.7934 7.52453 8.7934 7.23311C8.7934 6.94169 8.55496 6.70325 8.26354 6.70325H3.56109C3.26967 6.70325 3.03123 6.94169 3.03123 7.23311C3.03123 7.52453 3.26967 7.76296 3.56109 7.76296Z" fill="white"/>
 </svg>
                       <p class="text-white fw-normal size-17 ms-2">15 sep 2024</p>
                     </div>
-                    <h2 class="w-700 size-22 text-white">Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.</h2>
+                    <h2 class="w-500 size-16 text-white">Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.</h2><a class="d-flex align-items-center mt-2" href="#"> <span class="w-500 size-16 text-white">Read More </span><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.17773 10.3994H16.8208" stroke="white" stroke-width="1.24028" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.2383 4.81836L16.8195 10.3996L11.2383 15.9809" stroke="white" stroke-width="1.24028" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
                   </div>
                 </div>
               </div>
@@ -308,7 +334,7 @@
       <div class="container"> 
         <h2 class="h2-heading text-center mb-5"> Our Locations</h2>
         <div class="ourlocations__container position-relative">
-          <div> <img class="w-100" src="/images/map-layout.png"></div>
+          <div class="ourlocations__container--map"><img class="w-100" src="/images/image-map.png"></div>
           <div class="ourlocations__container--info d-flex flex-column align-items-center">
             <h2 class="size-38 text-center">Tornto </h2>
             <p class="size-20 fw-bold">Phone:<span class="size-20 weight-200">+1 4379842129</span></p>
@@ -322,7 +348,6 @@
       <p class="text-white">&copy; <span class="weight-700"><span class="currentYear"></span> Canny Vision - </span><span class="weight-400">All Rights Reserved
           <!--    <iframe src="https://maps.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6745.393772135621!2d-79.43646922351334!3d43.634430653644266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b35c6da9ab719%3A0x11bf8fd1db59ec36!2sCanny%20Vision!5e1!3m2!1sen!2sca!4v1731925529559!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>--></span></p>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/glide.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.js"></script>
     <script src="js/script.js"></script>
   </body>

@@ -1,13 +1,59 @@
 .latestBlog{
     padding: 150px 0;
+    .swiper-wrapper{
+        padding: 100px 0;
+    }
+    .container-non{
+        /*
+        max-width: 80%;
+        margin: auto;
+        */
+        @include max(768){
+            max-width: 100%;
+        }
+    }
     &__swiper{
         position: static;
+        .swiper-slide-prev{
+            .latestBlog__swiper--card{
+                margin-right: 0;
+                @include max(992){
+                  //  margin-right: 0;
+                }
+            }
+        }
+        .swiper-slide-next{
+            .latestBlog__swiper--card{
+                margin-left: 0;
+                @include max(992){
+                //    margin-left: 0;
+                }
+            }
+        }
         &--card{
-            max-width: 95%;
+            max-width: 75%;
+            margin: auto;
             position: relative;
+            @include max(1199){
+               
+            }
+
+            @include max(768){
+              //  max-width: 80%;
+            }
+            @include max(600){
+                max-width: 100%;
+            }
             &::after{
                 @include after();
-                background: linear-gradient(180deg, rgba(0, 0, 0, .5) 40%, #000000 60%);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.9019607843) 60%);
+                border-radius: 10px;
+                bottom: 0;
+                top: auto;
+                height: 70%;
+                @include max(992){
+             
+                }
                  
             }
            
@@ -17,8 +63,39 @@
                 border-bottom-left-radius: 10px;
                 border-bottom-right-radius: 10px;
                 padding: 30px 30px;
-                position: relative;
+                position: absolute;
                 z-index: 99999;
+                bottom: 0;
+                @include max(992){
+                    padding: 20px 20px;
+                } 
+                @include max(600){
+                    padding: 15px 15px;
+                } 
+                p{
+                    @include max(994){
+                        font-size:12px
+                    } 
+                    @include max(600){
+                        font-size: 11px
+                    } 
+                }
+                h2,a{
+                    @include max(994){
+                        font-size: 15px
+                    } 
+                    @include max(600){
+                        font-size: 14px
+                    } 
+                }
+                a span{
+                    @include max(994){
+                        font-size: 18px
+                    } 
+                    @include max(600){
+                        font-size: 11px
+                    } 
+                }
 
 
             }
@@ -27,4 +104,14 @@
     .swiper-pagination{
         @extend %pagination;
         }
+        .swiper-slide:not(.swiper-slide-active){
+           // transform: scale(.9);
+        }
+        .swiper-slide{
+            z-index: -1;
+        }
+.swiper-slide.swiper-slide-active{
+   transform: scale(1.25);
+   z-index: 9999;
+}
 }

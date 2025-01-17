@@ -15,7 +15,7 @@
                 clip-path: url(#my-clip-path);
                 color: #fff;
                 @include max(992){
-                   max-width: 70%;
+                  // max-width: 70%;
                    margin: auto;
                    margin-bottom: 25px;
                 }
