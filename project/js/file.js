@@ -1,71 +1,46 @@
-
 var mySwiper = new Swiper(".expertise .swiper-container", {
   spaceBetween: 0,
   slidesPerView: 1.6,
   centeredSlides: true,
   loop: true,
- 
+
   navigation: {
     nextEl: ".expertise .swiper-button-next",
     prevEl: ".expertise .swiper-button-prev",
   },
   breakpoints: {
-    768:{
+    768: {
       slidesPerView: 1.4,
-    }
-    /*
-    768:{
-     slidesPerView: 1.5,
     },
-   991: {
-    // slidesPerView: 1.5,
-    
-   },
-   992: {
-     slidesPerView: 3,
-   
-   },
-   1200: {
-     slidesPerView: 3,
-   },
-   2700:{
-     slidesPerView: 1,
-   }
-   */
- },
+  },
 });
-
 
 var mySwiperBlog = new Swiper(".latestBlog .swiper-container", {
   spaceBetween: 20,
   slidesPerView: 3,
   centeredSlides: true,
   loop: true,
- 
-  
 
   navigation: {
     nextEl: ".latestBlog .swiper-button-next",
     prevEl: ".latestBlog .swiper-button-prev",
   },
   breakpoints: {
-     768:{
+    768: {
       slidesPerView: 1.5,
-     },
+    },
     991: {
-     // slidesPerView: 1.5,
-     
+      // slidesPerView: 1.5,
     },
     992: {
       slidesPerView: 3,
-    
     },
     1200: {
       slidesPerView: 3,
     },
-    2700:{
+    2700: {
       slidesPerView: 3,
-    }
+    },
   },
 });
 
@@ -81,105 +56,99 @@ window.onscroll = () => {
   scrollNav();
 };
 //jamburg menu
-let show = false;
-const showMenu = () => {
-  const hamburgBtn = document.querySelector(".hamburgMenu");
-
-  hamburgBtn.addEventListener("click", () => {
-    if (!show) {
-      document.body.classList.add("showmenu");
-      show = true;
-      console.log(show);
+//showmenu
+function toggleBtns(element, btn, value, classProp) {
+  btn.addEventListener("click", () => {
+    if (!value) {
+      element.classList.add(classProp);
+      value = true;
     } else {
-      show = false;
-      document.body.classList.remove("showmenu");
-      console.log(show);
+      value = false;
+      element.classList.remove(classProp);
     }
   });
+}
+
+const showMenu = () => {
+  const hamburgBtn = document.querySelector(".hamburgMenu");
+  let show = false;
+  toggleBtns(document.querySelector("body"), hamburgBtn, show, "showmenu");
 };
 showMenu();
 
 //get current year
 
 document.querySelector(".currentYear").textContent = new Date().getFullYear();
-/*
-new Glide(".glide", {
-  type: "carousel",
-  autoplay: 0,
-  animationDuration:250,
-  animationTimingFunc: "linear",
-  peek:300,
-  gap: 0,
+//switch mode toggle menu
+
+const toggleMenuLight = () => {
+  const toggleBtn = document.querySelector(".switch-mode.btn");
+  let showMenu = false;
+  toggleBtns(
+    document.querySelector("body"),
+    toggleBtn,
+    showMenu,
+    "showmenuLight"
+  );
+};
+toggleMenuLight();
+
+//Implement dark auto light mode
+
+const drkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const lightMode = window.matchMedia("(prefers-color-scheme: light)").matches;
+
+
+function enableLightMode() {
+  document.body.classList.add("lightMode");
+  document.body.classList.remove("drkMode");
+}
+function enableDrkMode() {
+  document.body.classList.remove("lightMode");
+  document.body.classList.add("drkMode");
+}
+
+const applyAutoMode = () => {
+  drkMode
+    ? localStorage.setItem("themeMode", "drk")
+    : localStorage.setItem("themeMode", "light");
+};
+function applyFuctions(){
+  localStorage.getItem("themeMode") === "drk"
+  ? enableDrkMode()
+  : enableLightMode();
+
+  localStorage.getItem('autoTheme') =='true' ? document.body.classList.add('auto') : document.body.classList.remove('auto')
   
-  
-
-  breakpoints: {
-    600: {
-      peek: 300,
-     
-    },
-    700: {
-      peek: 200,
-    },
-    900: {
-      peek: 200,
-    },
-
-    1200: {
-      peek: 200,
-    },
-    1300: {
-      peek: 300,
-    },
-    1400: {
-      peek: 400,
-    }
-  },
-  
-  
-}).mount();
-
-*/
-/*
-window.addEventListener("load", function () {
-  new Glide(".glide", {
-    gap: 0,
-    type: "carousel",
-    animationDuration: 400,
-    peek: 300,
-    perView: 1,
-    breakpoints: {
-      300: {
-        peek: 100,
-      },
-      400: {
-        peek: 70,
-      },
-
-      500: {
-        peek: 80,
-      },
-      600: {
-        peek: 50,
-      },
-      700: {
-        peek: 80,
-      },
-      900: {
-        peek: 90,
-      },
-
-      1200: {
-        peek: 110,
-      },
-      1300: {
-        peek: 150,
-      },
-      1400: {
-        peek: 120,
-      },
-    },
-  }).mount();
-});
-
-*/
+}
+function implementClick() {
+  document
+    .querySelectorAll(".switch-mode__list button")
+    .forEach((item, index) => {
+      item.addEventListener("click", () => {
+        
+        if (index === 0) {
+          //auto mode
+          applyAutoMode();
+          localStorage.setItem("autoTheme", true);
+        }
+        if (index === 1) {
+          //light mode
+          localStorage.setItem("themeMode", "light");
+          localStorage.setItem("autoTheme", false);
+        }
+        if (index === 2) {
+          //drkMode
+          localStorage.setItem("themeMode", "drk");
+          localStorage.setItem("autoTheme", false);
+        }
+        applyFuctions()
+       
+      });
+     if(localStorage.getItem('themeMode') != null){
+      applyFuctions()
+     }
+   
+    });
+}
+implementClick();

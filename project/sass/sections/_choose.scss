@@ -1,7 +1,7 @@
 .choose{
     &__cards{
         position: relative;
-        z-index: 9999999999999;
+        z-index: 99;
         @for $i from 1 through  4{
             .row{
                 >div:nth-child(#{$i}){

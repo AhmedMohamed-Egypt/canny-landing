@@ -28,9 +28,9 @@ body.showmenu{
             }
         }
     }
-    .hero__nav ul{
+    .hero__nav ul.hero__nav__list{
         transition: height .15s ease-in;
-     max-height: 500px;
+     max-height: 1000px;
      padding: 10px 20px;
 
     }

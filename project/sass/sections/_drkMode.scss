@@ -1,5 +1,5 @@
 body {
-  &.dark-mode {
+  &.drkMode{
     background-color: #06070e;
     .h2-heading {
       color: #b5b5bd;
@@ -66,6 +66,26 @@ body {
         top: -30%;
       }
     }
+    .switch-mode__list--drk{
+      background-color: #000 !important;
+    }
+  }
+  &.lightMode{
+    .switch-mode__list--light{
+      background-color: #000 !important;
+    }
+  }
+  &.auto{
+    button.switch-mode__list--auto{
+      background-color: #000 !important;
+    }
+    button.switch-mode__list--light{
+      background: none!important;
+    }
+    button.switch-mode__list--drk{
+      background: none!important;
+    }
+   
   }
 }
 
