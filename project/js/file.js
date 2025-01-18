@@ -2,8 +2,10 @@ var mySwiper = new Swiper(".expertise .swiper-container", {
   spaceBetween: 0,
   slidesPerView: 1.6,
   centeredSlides: true,
-  loop: true,
 
+  roundLengths: true,
+  loop: true,
+  loopAdditionalSlides: 30,
   navigation: {
     nextEl: ".expertise .swiper-button-next",
     prevEl: ".expertise .swiper-button-prev",
@@ -41,6 +43,24 @@ var mySwiperBlog = new Swiper(".latestBlog .swiper-container", {
     2700: {
       slidesPerView: 3,
     },
+  },
+});
+
+
+var mySwiperLocations = new Swiper(".ourlocations  .swiper-container", {
+  spaceBetween: 0,
+  slidesPerView: 1,
+  
+  loop: true,
+
+  navigation: {
+    nextEl: ".expertise .swiper-button-next",
+    prevEl: ".expertise .swiper-button-prev",
+  },
+  pagination: {
+    el: ".ourlocations .swiper-pagination",
+    dynamicBullets: true,
+    clickable:true
   },
 });
 

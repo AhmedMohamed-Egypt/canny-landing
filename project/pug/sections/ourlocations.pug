@@ -2,16 +2,32 @@
  .container 
   h2(class="h2-heading text-center mb-5")  Our Locations
   .ourlocations__container.position-relative
-    div(class="ourlocations__container--map")
-     img(src="/images/image-map.png" class="w-100")
-    div(class="ourlocations__container--info d-flex flex-column align-items-center")
-     h2(class="size-38 text-center") Tornto 
-     p(class="size-20 fw-bold") Phone:
-      span(class="size-20 weight-200") +1 4379842129
-     p(class="size-20 fw-bold") Email: 
-      span(class="size-20 weight-200") contacts@canny.vision
-     p(class="size-20 fw-bold") Address: 
-      span(class="size-20 weight-200") 22 Close Ave M6K2V4 Toronto, Canada
+    
+    div(class="ourlocations__slider")
+     .swiper.swiper-container
+      .swiper-wrapper 
+       .swiper-slide 
+        div(class="ourlocations__container--info canda ")
+         div(class="ourlocations__container--info--positioning")
+          h2(class="size-38 text-center") Tornto 
+          p(class="size-20 fw-bold") Phone: 
+           span(class="size-20 weight-200") +1 4379842129
+          p(class="size-20 fw-bold") Email:  
+           span(class="size-20 weight-200") contacts@canny.vision
+          p(class="size-20 fw-bold") Address: 
+           span(class="size-20 weight-200") 22 Close Ave M6K2V4 Toronto, Canada
+       .swiper-slide 
+        div(class="ourlocations__container--info tunis")
+         div(class="ourlocations__container--info--positioning")
+          h2(class="size-38 text-center") Tunis
+          p(class="size-20 fw-bold") Phone: 
+           span(class="size-20 weight-200") +1 437 984 2129
+          p(class="size-20 fw-bold") Email: 
+           span(class="size-20 weight-200") contacts@canny.vision
+          p(class="size-20 fw-bold") Address: 
+           span(class="size-20 weight-200") 18 Rue Amine Abbessi, 1002 Tunis ,Tunisie
+      .swiper-pagination
+    
 .footer
  p(class="text-white") &copy; 
   span(class="weight-700") <span class="currentYear"></span> Canny Vision - 

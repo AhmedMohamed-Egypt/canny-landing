@@ -12,7 +12,7 @@
   //  border: 1px solid $black;
     overflow: hidden;
     height: 100%;
-    padding: 160px 0;
+    padding: 178px 0;
     @include max(768){
       padding: 190px 0;
     }
@@ -79,6 +79,7 @@
     }
 
     .expertise__card--after{
+      border-radius: 30px;
       @include after();
 
       background-image: linear-gradient(
@@ -95,8 +96,13 @@
       background-repeat: no-repeat !important;
       background-position: right !important;
       background-blend-mode: color-dodge !important;
-      @include max(768){
+      border-radius: 30px;
+      @include max(993){
         background-size:cover !important;
+ 
+      }
+      @include max(768){
+        
         height: 180px;
       }
     }
@@ -169,7 +175,7 @@
     
     }
       //transform: scaleX(.9);
-      transform: scale(.89);
+      transform: scale(.88);
        &.swiper-slide-prev{
  
         .expertise__card{
