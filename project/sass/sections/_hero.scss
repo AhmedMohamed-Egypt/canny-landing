@@ -2,7 +2,7 @@
   height: 100vh;
   //  background-image: url('../images/hero.svg');
   @include max(768) {
-    height: 600px;
+   // height: 600px;
   }
   &::after {
     @include after();

@@ -250,7 +250,8 @@
    
   }
   .swiper-slide-active{
-   //  transform: scaleX(1.12);
+     transform: scaleX(1.12);
+   /*
      animation-name: scalesDesktop;
      animation-duration: .75s;
      animation-fill-mode: forwards;
@@ -258,9 +259,11 @@
      z-index: 9999;
      transition: .25s;
      transform-origin: center;
+     */
 
      @include max(600){
-      animation-name: scalesMobiles;
+      transform: scaleX(1.2);
+      z-index: 999;
      }
   }
 .swiper-pagination {
