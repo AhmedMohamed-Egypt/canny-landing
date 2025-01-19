@@ -1,10 +1,10 @@
 - var cards = [{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-1.png'},{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-2.png'},{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-3.png'},{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-4.png'},{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-5.png'},{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-6.png'},{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-7.png'},{title:'Mauris ullamcorper tortor sed purus interdum, fermentum efficitur dictu.',img:'images/blog-8.png'}]
 
-
+//data-aos="slide-up" data-aos-duration=`${val.dataos}`
 .latestBlog.no-m-p
  .container-non
-  h2(class="h2-heading text-center mb-xl-5") Our Latest Blog 
-  .latestBlog__swiper.mb-lg-5
+  h2(class="h2-heading text-center mb-xl-5" data-aos="fade" data-aos-duration="2000") Our Latest Blog 
+  div(class="latestBlog__swiper mb-lg-5" data-aos="slide-up" data-aos-duration=1500)
    .swiper.swiper-container
     .swiper-wrapper
      each val in cards

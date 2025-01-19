@@ -1,14 +1,15 @@
-- cards = [{title:'Customizable, Cutting-Edge Solutions',text:'Each solution is designed to integrate seamlessly into your existing infrastructure and tailored to meet the specific needs of your organization.'},{title:'Quality, Privacy, and Security',text:'We prioritize data privacy and security, ensuring all solutions comply with Canadian standards and regulations.'},{title:'Canadian Market Focus',text:'As a Canadian company, we understand the unique challenges and opportunities in Canada’s regulatory landscape and local industries.'},{title:'Core Expertise in Cognitive Vision',text:'With deep expertise in Cognitive Vision, we deliver intelligent systems that don’t just monitor—they understand and learn from complex visual environments.'}]
+- cards = [{title:'Customizable, Cutting-Edge Solutions',text:'Each solution is designed to integrate seamlessly into your existing infrastructure and tailored to meet the specific needs of your organization.',dataos:500},{title:'Quality, Privacy, and Security',text:'We prioritize data privacy and security, ensuring all solutions comply with Canadian standards and regulations.',dataos:1200},{title:'Canadian Market Focus',text:'As a Canadian company, we understand the unique challenges and opportunities in Canada’s regulatory landscape and local industries.',dataos:1500},{title:'Core Expertise in Cognitive Vision',text:'With deep expertise in Cognitive Vision, we deliver intelligent systems that don’t just monitor—they understand and learn from complex visual environments.',dataos:2000}]
 .choose.no-m-p
- h2(class="h2-heading text-center mb-5") Why Choose Canny Vision?
+ h2(class="h2-heading text-center mb-5" data-aos="fade" data-aos-duration="2000") Why Choose Canny Vision?
  .container 
   .choose__cards.mt-5.pt-5
    .row 
     each val in cards 
-     .col-lg-6.mb-5
+     div(class="col-lg-6 mb-5" data-aos="slide-up" data-aos-duration=`${val.dataos}`)
       div(class="choose__cards--card")
        .col-xl-7.mb-xl-5.mb-2
         h2(class="size-48 text-white position-relative z-3")=val.title 
        .col-xl-8.col-10
         p(class="size-18 fw-lighter text-white position-relative z-3")=val.text
      
+//data-aos="slide-up" data-aos-duration=`${val.dataos}`

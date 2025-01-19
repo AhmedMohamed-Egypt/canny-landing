@@ -18,7 +18,7 @@
       padding: 190px 0;
     }
     @include max(600){
-      padding: 200px 0;
+      padding: 240px 0;
      }
 
     &.motion {
@@ -143,7 +143,7 @@
       }
       @include max(768){
         
-        height: 180px;
+        height: 230px;
       }
     }
   }
@@ -160,7 +160,7 @@
     padding-left: 50px;
     @include max(768){
         top: auto;
-        bottom: 25px;
+        bottom: 50px;
         padding-left: 20px;
     }
     @include max(450){
