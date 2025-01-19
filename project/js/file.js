@@ -45,10 +45,8 @@ const triggerSections = () => {
     });
   });
 };
-if (window.matchMedia("(max-width: 700px)").matches) {
+if (window.matchMedia("(max-width: 769px)").matches) {
   triggerSections();
-} else {
-  // Viewport is greater than 700 pixels wide
 }
 //triggerSections();
 
@@ -68,11 +66,11 @@ function removeActive() {
 
 function scrollingSections(){
   removeActive()
-  if(window.scrollY > ((aboutSection.offsetTop + vh) - 100 ) && window.scrollY < ((productSection.offsetTop+vh) )){
+  if(window.scrollY >= ((aboutSection.offsetTop + vh ) ) && window.scrollY < ((productSection.offsetTop + vh - 150) )){
     
     document.querySelector(`.${aboutSection.getAttribute('data-target')}`).classList.add('active')
     
-  }else if (window.scrollY > ((productSection.offsetTop + vh - 150)  ) && window.scrollY < ( expertiseSection.offsetTop - 150 )){
+  }else if (window.scrollY > ((productSection.offsetTop + vh - 200)  ) && window.scrollY < ( expertiseSection.offsetTop - 150 )){
   
     document.querySelector(`.${productSection.getAttribute('data-target')}`).classList.add('active')
 
@@ -97,11 +95,9 @@ window.onscroll = () => {
   scrollNav();
  
 
-  if (window.matchMedia("(min-width: 701px)").matches) {
+  if (window.matchMedia("(min-width: 770px)").matches) {
     scrollingSections()
-  } else {
-    // Viewport is greater than 700 pixels wide
-  }
+  } 
   
 };
 //jamburg menu

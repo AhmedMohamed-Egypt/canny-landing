@@ -7,6 +7,7 @@
         }
     }
     &__cards{
+        overflow: hidden;
         &--card{
           svg{
             
@@ -27,12 +28,16 @@
                 }
                 @include max(768){
                     max-width: 100%;
+                    height: 280px;
                
                  }
                 h2{
                     line-height: 1.1;
-                    @include between(769,993){
+                    @include between(768,993){
                         font-size: 18px;
+                    }
+                    @include max(767){
+                        font-size: 22px;
                     }
                     
                 }
@@ -40,9 +45,13 @@
                     @include max(1300){
                         font-size: 16px;
                     }
-                    @include between(769,993){
+                    @include between(768,993){
                         font-size: 14px;
                     }
+                    @include max(500){
+                        font-size: 15px;
+                    }
+                   
                 }
              
                 .icon{
@@ -54,6 +63,9 @@
                     background-size: 50%;
                     background-repeat: no-repeat;
                     background-position: center;
+                    @include between(320,993){
+                        margin-right: 15px;
+                    }
                     
 
                 }

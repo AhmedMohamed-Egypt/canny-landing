@@ -1,8 +1,23 @@
+%common{
+  background-color: transparent;
+  width: 15%;
+  z-index: 9;
+}
 .expertise {
   padding-top: 100px;
 
   &__slider {
-    
+    position: relative;
+    &::after{
+      @include after();
+    @extend %common;
+     }
+     &::before{
+      @include before();
+      @extend %common;
+      right: 0;
+      left: auto;
+     }
   }
   &__card {
     //  padding: 160px 0;
@@ -195,6 +210,7 @@
   .swiper-wrapper {
        align-items: center;
        padding: 50px 0;
+      
   }
   .swiper-slide-active {
     
