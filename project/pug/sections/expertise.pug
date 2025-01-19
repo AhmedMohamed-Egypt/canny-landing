@@ -1,4 +1,5 @@
-- var cards =  [{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.',class:'motion'},{title:'Object Classification',text:'Identify and classify objects with precision, enabling actionable insights across various applications.',class:'object'},{title:'Behavior Tracking',text:'Track behaviors to enhance understanding of patterns and identify anomalies.',class:'track'}]
+- var cards =  [{title:'Motion Detection',text:'Capture and analyze movement patterns for enhanced security and automation.',class:'motion'},{title:'Object Classification',text:'Identify and classify objects with precision, enabling actionable insights across various applications.',class:'object'},{title:'Behavior Tracking',text:'Track behaviors to enhance understanding of patterns and identify anomalies.',class:'track'},{title:'Incident Detection',text:'Detect real-time incidents to support immediate action and improve situational awareness.',class:'incident'},{title:'Traffic Monitoring',text:'Optimize traffic flow and safety with advanced monitoring and real-time analytics..',class:'traffic'}]
+//expertise-traffic.png
 .expertise.no-m-p
  .container-3  
   h2(class="h2-heading text-center") Our Expertise 
@@ -13,7 +14,7 @@
         .expertise__content 
          .col-6
           h2(class="text-white position-relative z-3 size-45 mb-3")=val.title 
-         .col-xl-7.expertise__card--txt
+         .col-xl-6.col-lg-7.col-md-8.expertise__card--txt
           p(class="fw-lighter text-white position-relative z-3 size-17")=val.text
         span.expertise__card--after.d-block
         

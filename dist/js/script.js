@@ -1,3 +1,10 @@
+AOS.init({
+  useClassNames: true,
+  initClassName: false,
+  animatedClassName: 'animated',
+});
+
+
 var mySwiper = new Swiper(".expertise .swiper-container", {
   spaceBetween: 0,
   slidesPerView: 1.6,
@@ -5,7 +12,7 @@ var mySwiper = new Swiper(".expertise .swiper-container", {
 
   roundLengths: true,
   loop: true,
-  loopAdditionalSlides: 30,
+  loopAdditionalSlides: 100,
   navigation: {
     nextEl: ".expertise .swiper-button-next",
     prevEl: ".expertise .swiper-button-prev",
@@ -22,6 +29,9 @@ var mySwiperBlog = new Swiper(".latestBlog .swiper-container", {
   slidesPerView: 3,
   centeredSlides: true,
   loop: true,
+  roundLengths: true,
+  loop: true,
+  loopAdditionalSlides: 30,
 
   navigation: {
     nextEl: ".latestBlog .swiper-button-next",
@@ -46,7 +56,6 @@ var mySwiperBlog = new Swiper(".latestBlog .swiper-container", {
   },
 });
 
-
 var mySwiperLocations = new Swiper(".ourlocations  .swiper-container", {
   spaceBetween: 0,
   slidesPerView: 1,
@@ -54,8 +63,8 @@ var mySwiperLocations = new Swiper(".ourlocations  .swiper-container", {
   loop: true,
 
   navigation: {
-    nextEl: ".expertise .swiper-button-next",
-    prevEl: ".expertise .swiper-button-prev",
+    nextEl: ".ourlocations .swiper-button-next",
+    prevEl: ".ourlocations .swiper-button-prev",
   },
   pagination: {
     el: ".ourlocations .swiper-pagination",

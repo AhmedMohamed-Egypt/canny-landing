@@ -1,5 +1,6 @@
 .expertise {
   margin-top: 150px;
+
   &__slider {
     
   }
@@ -12,7 +13,7 @@
   //  border: 1px solid $black;
     overflow: hidden;
     height: 100%;
-    padding: 178px 0;
+    padding: 170px 0;
     @include max(768){
       padding: 190px 0;
     }
@@ -45,14 +46,14 @@
             rgba(12, 15, 22, 1) 0%,
             #0c0f16 100%
           ),
-          url("../images/tr.png");
+          url("../images/expertise-behaviuor.png");
           @include max(768){
             background: linear-gradient(
                 270deg,
                 rgba(12, 15, 22, 1) 0%,
                 #0c0f16 100%
               ),
-              url("../images/tr.png");
+              url("../images/expertise-behaviuor.png");
           }
       }
     }
@@ -63,7 +64,7 @@
             rgba(12, 15, 22, 1) 0%,
             #0c0f16 100%
           ),
-          url("../images/classify.png");
+          url("../images/expertise-object.png");
       //  background-size: 70% !important;
       @include max(768){
         background: linear-gradient(
@@ -71,7 +72,49 @@
             rgba(12, 15, 22, 1) 0%,
             #0c0f16 100%
           ),
-          url("../images/classify.png");
+          url("../images/expertise-object.png");
+          background-size:cover !important;
+      }
+      
+      }
+    }
+    &.incident{
+      .expertise__card--before {
+        background: linear-gradient(
+            270deg,
+            rgba(12, 15, 22, 1) 0%,
+            #0c0f16 100%
+          ),
+          url("../images/incident-detection.png");
+      //  background-size: 70% !important;
+      @include max(768){
+        background: linear-gradient(
+            270deg,
+            rgba(12, 15, 22, 1) 0%,
+            #0c0f16 100%
+          ),
+          url("../images/incident-detection.png");
+          background-size:cover !important;
+      }
+      
+      }
+    }
+    &.traffic{
+      .expertise__card--before {
+        background: linear-gradient(
+            270deg,
+            rgba(12, 15, 22, 1) 0%,
+            #0c0f16 100%
+          ),
+          url("../images/expertise-traffic.png");
+      //  background-size: 70% !important;
+      @include max(768){
+        background: linear-gradient(
+            270deg,
+            rgba(12, 15, 22, 1) 0%,
+            #0c0f16 100%
+          ),
+          url("../images/expertise-traffic.png");
           background-size:cover !important;
       }
       
@@ -82,11 +125,8 @@
       border-radius: 30px;
       @include after();
 
-      background-image: linear-gradient(
-        270deg,
-        rgba(12, 15, 22, 0) 0%,
-        #0c0f16 46%
-      );
+      background-image: linear-gradient(270deg, rgba(12, 15, 22, 0) 40%, #0c0f16 50%);
+      
       @include max(768){
         background-image: linear-gradient(180deg, rgba(12, 15, 22, 0) 30%, #0c0f16 44%)
       }
@@ -94,7 +134,7 @@
     .expertise__card--before{
       @include before();
       background-repeat: no-repeat !important;
-      background-position: right !important;
+      background-position:100% center !important;
       background-blend-mode: color-dodge !important;
       border-radius: 30px;
       @include max(993){
@@ -130,10 +170,12 @@
     h2{
         @include max(768){
             font-size: 36px;
+            color: #B5B5BD !important;
+            margin-bottom: 0 !important;
 
         }
         @include max(450){
-            transform: scaleX(.9);
+            transform: scale(.9);
            
         }
     }
@@ -144,7 +186,7 @@
             
         }
         @include max(450){
-            transform: scaleX(.9);
+            transform: scale(.9);
            
         }
     }
@@ -152,6 +194,7 @@
  
   .swiper-wrapper {
        align-items: center;
+       padding: 50px 0;
   }
   .swiper-slide-active {
     
@@ -207,15 +250,38 @@
    
   }
   .swiper-slide-active{
-     transform: scaleX(1.12);
+   //  transform: scaleX(1.12);
+     animation-name: scalesDesktop;
+     animation-duration: .75s;
+     animation-fill-mode: forwards;
+     animation-play-state: ease-in-out;
      z-index: 9999;
+     transition: .25s;
+     transform-origin: center;
+
      @include max(600){
-      transform: scaleX(1.2);
+      animation-name: scalesMobiles;
      }
   }
 .swiper-pagination {
     @extend %pagination;
     margin-top: 25px;
+  }
+}
+@keyframes scalesDesktop {
+  0%{
+    transform: scale(.7);
+  }
+  100%{
+    transform: scale(1.12);
+  }
+}
+@keyframes scalesMobiles {
+  0%{
+    transform: scaleX(.7);
+  }
+  100%{
+    transform: scaleX(1.2);
   }
 }
 /*

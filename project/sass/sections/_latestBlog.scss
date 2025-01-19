@@ -31,26 +31,26 @@
             }
         }
         &--card{
-            max-width: 75%;
+            max-width: 70%;
             margin: auto;
             position: relative;
             @include max(1199){
-               
+                max-width: 80%;
             }
 
             @include max(768){
-              //  max-width: 80%;
+               max-width: 80%;
             }
             @include max(600){
                 max-width: 100%;
             }
             &::after{
                 @include after();
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0.9019607843) 60%);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.95) 80%);
                 border-radius: 10px;
                 bottom: 0;
                 top: auto;
-                height: 70%;
+                height: 100%;
                 @include max(992){
              
                 }
@@ -66,9 +66,10 @@
                 position: absolute;
                 z-index: 99999;
                 bottom: 0;
-                @include max(992){
-                    padding: 20px 20px;
+                @include max(1199){
+                    padding: 15px 20px;
                 } 
+            
                 @include max(600){
                     padding: 15px 15px;
                 } 
@@ -81,6 +82,9 @@
                     } 
                 }
                 h2,a{
+                    @include max(1199){
+                        font-size: 14px
+                    }
                     @include max(994){
                         font-size: 15px
                     } 
@@ -111,7 +115,31 @@
             z-index: -1;
         }
 .swiper-slide.swiper-slide-active{
-   transform: scale(1.25);
+    animation-name: scalesDesktop;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+    animation-play-state: ease-in-out;
+    z-index: 9999;
+    transition: .25s;
+    transform-origin: center;
    z-index: 9999;
 }
 }
+
+
+@keyframes scalesDesktop {
+    0%{
+      transform: scale(.7);
+    }
+    100%{
+      transform: scale(1.25);
+    }
+  }
+  @keyframes scalesMobiles {
+    0%{
+      transform: scaleX(.7);
+    }
+    100%{
+      transform: scaleX(1.2);
+    }
+  }
