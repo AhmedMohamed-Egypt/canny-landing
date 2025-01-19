@@ -13,17 +13,17 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body> 
-    <div class="hero bg-cover bg-center position-relative"><video playsinline  autoplay muted loop id="myVideo"> <source src="/images/landing-page-video-canny-vision.mp4" type="video/mp4"></video>
+    <div class="hero bg-cover bg-center position-relative" id="Home-Link"><video playsinline  autoplay muted loop id="myVideo"> <source src="/images/landing-page-video-canny-vision.mp4" type="video/mp4"></video>
       <div class="hero__nav py-4 position-relative">
         <div class="container"> 
           <div class="d-flex align-items-center position-relative z-3 hero__nav--wrapnav"><a class="me-auto" href="#"><img src="/images/canny-logo.svg"></a>
             <ul class="d-flex align-items-center hero__nav__list">
-              <li> <a class="grey-72 roboto-font size-16 fw-medium" href="#">Home</a></li>
-              <li> <a class="grey-72 roboto-font size-16 fw-medium" href="#">About us</a></li>
-              <li> <a class="grey-72 roboto-font size-16 fw-medium" href="#">Our Product</a></li>
-              <li> <a class="grey-72 roboto-font size-16 fw-medium" href="#">Our Expertise</a></li>
-              <li> <a class="grey-72 roboto-font size-16 fw-medium" href="#">Industries</a></li>
-              <li> <a class="grey-72 roboto-font size-16 fw-medium" href="#">Why Choose Us</a></li>
+              <li> <a class="grey-72 roboto-font size-16 fw-medium Home-Link active" href="#Home-Link">Home</a></li>
+              <li> <a class="grey-72 roboto-font size-16 fw-medium About-Link " href="#About-Link">About us</a></li>
+              <li> <a class="grey-72 roboto-font size-16 fw-medium Product-Link " href="#Product-Link">Our Product</a></li>
+              <li> <a class="grey-72 roboto-font size-16 fw-medium Expertise-Link " href="#Expertise-Link">Our Expertise</a></li>
+              <li> <a class="grey-72 roboto-font size-16 fw-medium Industries-Link " href="#Industries-Link">Industries</a></li>
+              <li> <a class="grey-72 roboto-font size-16 fw-medium Choose-Link " href="#Choose-Link">Why Choose Us</a></li>
               <li class="hero__nav__list--mode">
                 <button class="switch-mode btn"></button>
                 <div class="switch-mode__list">
@@ -71,7 +71,7 @@
     </div>
     <div class="overlay-product-about">
       <div class="overlay-product-about--pesdu"></div>
-      <div class="about-section pt-5">
+      <div class="about-section pt-5" id="About-Link" data-target="About-Link">
         <div class="container"> 
           <div class="about-section__widget position-relative overflow-hidden">
             <div class="about-section__widget--before"></div>
@@ -86,7 +86,7 @@
           </div>
         </div>
       </div>
-      <div class="product-section mt-5 pt-5 no-m-p">
+      <div class="product-section" id="Product-Link" data-target="Product-Link">
         <div class="container"> 
           <div class="row align-items-center">
             <div class="col-xl-6">
@@ -102,7 +102,7 @@
       </div>
     </div>
     <!--expertise-traffic.png-->
-    <div class="expertise no-m-p">
+    <div class="expertise no-m-p" id="Expertise-Link" data-target="Expertise-Link">
       <div class="container-3"> 
         <h2 class="h2-heading text-center" data-aos="fade" data-aos-duration="2000">Our Expertise </h2>
         <p class="ft-normal size-18 text-center" data-aos="fade-up" data-aos-duration="1500">Innovative VideoAnalytics Solutions</p>
@@ -219,7 +219,7 @@
       .swiper-button-prev
       .swiper-button-next
     -->
-    <div class="industries no-m-p">
+    <div class="industries no-m-p" id="Industries-Link" data-target="Industries-Link">
       <div class="container"> 
         <div class="industries__cards"> 
           <h2 class="h2-heading text-center mb-3" data-aos="fade" data-aos-duration="2000">Industries</h2>
@@ -278,7 +278,7 @@
         </div>
       </div>
     </div>
-    <div class="choose no-m-p">
+    <div class="choose no-m-p" id="Choose-Link" data-target="Choose-Link">
       <h2 class="h2-heading text-center mb-5" data-aos="fade" data-aos-duration="2000">Why Choose Canny Vision?</h2>
       <div class="container"> 
         <div class="choose__cards mt-5 pt-5">

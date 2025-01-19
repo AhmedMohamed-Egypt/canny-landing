@@ -1,4 +1,4 @@
-- var links = ['Home','About us','Our Product','Our Expertise','Industries','Why Choose Us']
+- var links = [{title:'Home',class:'Home-Link'},{title:'About us',class:'About-Link'},{title:'Our Product',class:'Product-Link'},{title:'Our Expertise',class:'Expertise-Link'},{title:'Industries',class:'Industries-Link'},{title:'Why Choose Us',class:'Choose-Link'}]
 
 .hero__nav.py-4.position-relative
   .container 
@@ -6,9 +6,9 @@
     a(href="#" class="me-auto")
      img(src="/images/canny-logo.svg")
     ul(class="d-flex align-items-center hero__nav__list")
-     each val in links 
+     each val,index in links 
       li 
-       a(href="#" class="grey-72 roboto-font size-16 fw-medium")=val
+       a(href=`#${val.class}` class=`grey-72 roboto-font size-16 fw-medium ${val.class} ${index===0?'active':''}`)=val.title
      li(class="hero__nav__list--mode")
       button(class="switch-mode btn")
        

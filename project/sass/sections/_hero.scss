@@ -71,6 +71,9 @@
       li {
         a {
           display: block;
+          &.active{
+            color: #fff;
+          }
         }
         &:not(:last-child) {
           a {

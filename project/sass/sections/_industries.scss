@@ -1,5 +1,6 @@
 .industries{
-    padding: 100px 0;
+   
+    padding-top: 100px;
     .container{
         @include max(993){
             max-width: 90% !important;

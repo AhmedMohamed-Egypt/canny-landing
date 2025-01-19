@@ -1,4 +1,18 @@
+.overlay-product-about{
+   
+}
+.about-section{
+    padding-top: 200px !important;
+    @include max(768){
+        padding-top: 50px !important;
+    }
+}
+
 .product-section {
+    padding-top: 150px;
+    @include max(768){
+        padding-top: 50px !important;
+    }
     &--txt{
         @include max(768){
             p{
