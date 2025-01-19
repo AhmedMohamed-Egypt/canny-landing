@@ -76,7 +76,7 @@ function scrollingSections(){
   
     document.querySelector(`.${productSection.getAttribute('data-target')}`).classList.add('active')
 
-  }else if(window.scrollY >= ( expertiseSection.offsetTop - 400) && window.scrollY < (idustrySection.offsetTop - 150 )){
+  }else if(window.scrollY >= ( expertiseSection.offsetTop - 150) && window.scrollY < (idustrySection.offsetTop - 150 )){
     
    
     document.querySelector(`.${expertiseSection.getAttribute('data-target')}`).classList.add('active')
