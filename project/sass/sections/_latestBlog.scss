@@ -115,7 +115,7 @@
             z-index: -1;
         }
 .swiper-slide.swiper-slide-active{
-    animation-name: scalesDesktop;
+    animation-name: scalesDesktopBlog;
     animation-duration: .75s;
     animation-fill-mode: forwards;
     animation-play-state: ease-in-out;
@@ -127,7 +127,7 @@
 }
 
 
-@keyframes scalesDesktop {
+@keyframes scalesDesktopBlog {
     0%{
       transform: scale(.7);
     }
@@ -135,7 +135,7 @@
       transform: scale(1.25);
     }
   }
-  @keyframes scalesMobiles {
+  @keyframes scalesMobilesBlog {
     0%{
       transform: scaleX(.7);
     }
