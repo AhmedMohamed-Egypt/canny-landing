@@ -9,7 +9,7 @@
 
                     &::before{
                         
-                        background: linear-gradient(270deg, rgba(12, 15, 22, .9) 0%, rgba(#0C0F16,1) 53%), url('../images/choose-#{$i}.svg'); ;
+                        background: linear-gradient(270deg, rgba(12, 15, 22, .9) 0%, rgba(#0C0F16,1) 53%), url('../images/choose-#{$i}.png'); ;
                     }
                   }
                   &:last-child{
