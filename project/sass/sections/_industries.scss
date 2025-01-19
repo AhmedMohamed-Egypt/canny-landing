@@ -1,5 +1,10 @@
 .industries{
     padding: 100px 0;
+    .container{
+        @include max(993){
+            max-width: 90% !important;
+        }
+    }
     &__cards{
         &--card{
           svg{
@@ -25,10 +30,17 @@
                  }
                 h2{
                     line-height: 1.1;
+                    @include between(769,993){
+                        font-size: 18px;
+                    }
+                    
                 }
                 p{
                     @include max(1300){
                         font-size: 16px;
+                    }
+                    @include between(769,993){
+                        font-size: 14px;
                     }
                 }
              

@@ -13,12 +13,9 @@ body {
     }
     .about-section__widget::after {
       background: linear-gradient(90deg, #0c0f16 57%, rgba(12, 15, 22, 0) 75%);
-      @include max(768) {
-        background: linear-gradient(
-          180deg,
-          #0c0f16 68%,
-          rgba(12, 15, 22, 0) 78%
-        );
+      @include max(993) {
+       
+        background: linear-gradient(180deg, #0c0f16 70%, rgba(12, 15, 22, 0) 80%);
       }
     }
     .overlay-product-about::before {
