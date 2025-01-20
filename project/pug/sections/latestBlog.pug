@@ -8,7 +8,7 @@
    .swiper.swiper-container
     .swiper-wrapper
      each val in cards
-      .swiper-slide
+      .swiper-slide 
        .latestBlog__swiper--card
         img(src=`${val.img}` class="position-relative w-100")
         div(class="latestBlog__swiper--card--body")
@@ -18,7 +18,7 @@
           </svg>
           p(class="text-white fw-normal size-17 ms-2") 15 sep 2024
          h2(class="w-500 size-16 text-white")=val.title
-         a(href="#" class="d-flex align-items-center mt-2") 
+         a(href="blog-details.html" class="d-flex align-items-center mt-2") 
           span(class="w-500 size-16 text-white") Read More 
           <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3.17773 10.3994H16.8208" stroke="white" stroke-width="1.24028" stroke-linecap="round" stroke-linejoin="round"/>

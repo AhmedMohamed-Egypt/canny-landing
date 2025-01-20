@@ -4,11 +4,14 @@ const expertiseSection = document.querySelector(".expertise");
 const idustrySection = document.querySelector(".industries ");
 const chooseUs = document.querySelector(".choose");
 const latesBlog = document.querySelector(".latestBlog");
-const vh = document.querySelector(".hero").clientHeight;
+const vh = document.querySelector(".hero")
 const allLinks = document.querySelectorAll(".hero__nav__list > li > a");
+const activeHomePage = document.querySelector('.home-page')
 let activeScrolling = false;
+var show = false;
 const triggerSections = () => {
   allLinks.forEach((item, index) => {
+    const calcVh = vh.clientHeight
     item.addEventListener("click", (e) => {
       e.preventDefault();
      
@@ -27,10 +30,10 @@ const triggerSections = () => {
         window.scrollTo(0, 0);
       }
       if (index === 1) {
-        window.scrollTo(0, aboutSection.offsetTop + vh - 100);
+        window.scrollTo(0, aboutSection.offsetTop + calcVh - 100);
       }
       if (index === 2) {
-        window.scrollTo(0, productSection.offsetTop + vh - 100);
+        window.scrollTo(0, productSection.offsetTop + calcVh - 100);
       }
       if (index === 3) {
         window.scrollTo(0, expertiseSection.offsetTop - 100);
@@ -45,7 +48,7 @@ const triggerSections = () => {
     });
   });
 };
-if (window.matchMedia("(max-width: 769px)").matches) {
+if (window.matchMedia("(max-width: 992px)").matches &&activeHomePage) {
   triggerSections();
 }
 //triggerSections();
@@ -65,12 +68,15 @@ function removeActive() {
 }
 
 function scrollingSections(){
+  
   removeActive()
-  if(window.scrollY >= ((aboutSection.offsetTop + vh ) ) && window.scrollY < ((productSection.offsetTop + vh - 150) )){
+  const calcVh = vh.clientHeight
+ 
+  if(window.scrollY >= ((aboutSection.offsetTop + calcVh ) ) && window.scrollY < ((productSection.offsetTop + calcVh - 150) )){
     
     document.querySelector(`.${aboutSection.getAttribute('data-target')}`).classList.add('active')
     
-  }else if (window.scrollY > ((productSection.offsetTop + vh - 200)  ) && window.scrollY < ( expertiseSection.offsetTop - 150 )){
+  }else if (window.scrollY > ((productSection.offsetTop + calcVh - 200)  ) && window.scrollY < ( expertiseSection.offsetTop - 150 )){
   
     document.querySelector(`.${productSection.getAttribute('data-target')}`).classList.add('active')
 
@@ -95,14 +101,14 @@ window.onscroll = () => {
   scrollNav();
  
 
-  if (window.matchMedia("(min-width: 770px)").matches) {
+  if (window.matchMedia("(min-width: 994px)").matches &&activeHomePage) {
     scrollingSections()
   } 
   
 };
 //jamburg menu
 //showmenu
-var show = false;
+
 function toggleBtns(element, btn, value, classProp) {
   btn.addEventListener("click", () => {
     if (!value) {
@@ -207,70 +213,78 @@ AOS.init({
   once: true,
 });
 
-var mySwiper = new Swiper(".expertise .swiper-container", {
-  spaceBetween: 0,
-  slidesPerView: 1.6,
-  centeredSlides: true,
-
-  roundLengths: true,
-  loop: true,
-  loopAdditionalSlides: 100,
-  navigation: {
-    nextEl: ".expertise .swiper-button-next",
-    prevEl: ".expertise .swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1.4,
+if(document.querySelector('.expertise .swiper-container')){
+  var mySwiper = new Swiper(".expertise .swiper-container", {
+    spaceBetween: 0,
+    slidesPerView: 1.6,
+    centeredSlides: true,
+  
+    roundLengths: true,
+    loop: true,
+    loopAdditionalSlides: 100,
+    navigation: {
+      nextEl: ".expertise .swiper-button-next",
+      prevEl: ".expertise .swiper-button-prev",
     },
-  },
-});
-
-var mySwiperBlog = new Swiper(".latestBlog .swiper-container", {
-  spaceBetween: 20,
-  slidesPerView: 3,
-  centeredSlides: true,
-  loop: true,
-  roundLengths: true,
-  loop: true,
-  loopAdditionalSlides: 30,
-
-  navigation: {
-    nextEl: ".latestBlog .swiper-button-next",
-    prevEl: ".latestBlog .swiper-button-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1.5,
+    breakpoints: {
+      768: {
+        slidesPerView: 1.4,
+      },
     },
-    991: {
-      // slidesPerView: 1.5,
-    },
-    992: {
-      slidesPerView: 3,
-    },
-    1200: {
-      slidesPerView: 3,
-    },
-    2700: {
-      slidesPerView: 3,
-    },
-  },
-});
+  });
+}
 
-var mySwiperLocations = new Swiper(".ourlocations  .swiper-container", {
-  spaceBetween: 0,
-  slidesPerView: 1,
+if(document.querySelector('.latestBlog .swiper-container')){
+  var mySwiperBlog = new Swiper(".latestBlog .swiper-container", {
+    spaceBetween: 20,
+    slidesPerView: 3,
+    centeredSlides: true,
+    loop: true,
+    roundLengths: true,
+    loop: true,
+    loopAdditionalSlides: 30,
+  
+    navigation: {
+      nextEl: ".latestBlog .swiper-button-next",
+      prevEl: ".latestBlog .swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1.5,
+      },
+      991: {
+        // slidesPerView: 1.5,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      2700: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
 
-  loop: true,
+if(document.querySelector('.ourlocations  .swiper-container')){
+  var mySwiperLocations = new Swiper(".ourlocations  .swiper-container", {
+    spaceBetween: 0,
+    slidesPerView: 1,
+  
+    loop: true,
+  
+    navigation: {
+      nextEl: ".ourlocations .swiper-button-next",
+      prevEl: ".ourlocations .swiper-button-prev",
+    },
+    pagination: {
+      el: ".ourlocations .swiper-pagination",
+      dynamicBullets: true,
+      clickable: true,
+    },
+  });
+}
 
-  navigation: {
-    nextEl: ".ourlocations .swiper-button-next",
-    prevEl: ".ourlocations .swiper-button-prev",
-  },
-  pagination: {
-    el: ".ourlocations .swiper-pagination",
-    dynamicBullets: true,
-    clickable: true,
-  },
-});
+

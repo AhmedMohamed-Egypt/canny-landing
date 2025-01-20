@@ -1,5 +1,5 @@
 body {
-  &.drkMode{
+  &.drkMode {
     background-color: #06070e;
     .h2-heading {
       color: #b5b5bd;
@@ -7,15 +7,19 @@ body {
     p {
       color: #b5b5bd;
     }
-  
-    .industries p , .ourlocations p{
+
+    .industries p,
+    .ourlocations p {
       color: #fff;
     }
     .about-section__widget::after {
       background: linear-gradient(90deg, #0c0f16 57%, rgba(12, 15, 22, 0) 75%);
       @include max(993) {
-       
-        background: linear-gradient(180deg, #0c0f16 70%, rgba(12, 15, 22, 0) 80%);
+        background: linear-gradient(
+          180deg,
+          #0c0f16 70%,
+          rgba(12, 15, 22, 0) 80%
+        );
       }
     }
     .overlay-product-about::before {
@@ -50,11 +54,11 @@ body {
       }
     }
     .choose {
-        position: relative;
+      position: relative;
       &::after {
         @include after();
         background: #ed1a37;
-        opacity: .1;
+        opacity: 0.1;
         -webkit-filter: blur(188.6px);
         filter: blur(188.6px);
         width: 50%;
@@ -64,26 +68,71 @@ body {
         top: -30%;
       }
     }
-    .switch-mode__list--drk{
+    .switch-mode__list--drk {
+      background-color: #000 !important;
+    }
+    .blog-page {
+      h2,
+      h3 {
+        color: #fff;
+      }
+      p {
+        color: #b5b5bd !important;
+      }
+      .blog-section__bookAcall {
+        background-color: #0c0f16;
+      }
+      .blog-section {
+        position: relative;
+        &::after {
+          @include after();
+
+          background: #a0ac4f;
+          opacity: 0.25;
+          -webkit-filter: blur(188.6px);
+          filter: blur(188.6px);
+          bottom: 0;
+          top: auto;
+          width: 25%;
+          height: 15%;
+          z-index: -1;
+          /* left: 0%; */
+        }
+        &::before{
+          @include before();
+          background: #ED1A37;
+         opacity: 0.1;
+
+         filter: blur(188.6px);
+         z-index: -1;
+         width: 25%;
+         left: auto;
+         right: 0;
+         top: 25%;
+         height: 50%;
+
+
+
+
+        }
+      }
+    }
+  }
+  &.lightMode {
+    .switch-mode__list--light {
       background-color: #000 !important;
     }
   }
-  &.lightMode{
-    .switch-mode__list--light{
+  &.auto {
+    button.switch-mode__list--auto {
       background-color: #000 !important;
     }
-  }
-  &.auto{
-    button.switch-mode__list--auto{
-      background-color: #000 !important;
+    button.switch-mode__list--light {
+      background: none !important;
     }
-    button.switch-mode__list--light{
-      background: none!important;
+    button.switch-mode__list--drk {
+      background: none !important;
     }
-    button.switch-mode__list--drk{
-      background: none!important;
-    }
-   
   }
 }
 

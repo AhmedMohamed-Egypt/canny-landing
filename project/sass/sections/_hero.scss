@@ -47,6 +47,7 @@
   }
 
   &__nav {
+
     @include max(992) {
       padding-bottom: 30px !important;
     }
@@ -71,6 +72,10 @@
       li {
         a {
           display: block;
+          transition: .25s;
+          &:hover{
+            color: #fff;
+          }
           &.active{
             color: #fff;
           }
@@ -105,20 +110,21 @@
       }
     }
   }
-  .hamburgMenu {
-    display: none;
-    span {
-      display: block;
-      width: 30px;
-      height: 3px;
-      background-color: #fff;
-      &:nth-child(2) {
-        margin: 7px 0px;
-      }
+  
+}
+.hamburgMenu {
+  display: none;
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    &:nth-child(2) {
+      margin: 7px 0px;
     }
-    @include max(992) {
-      display: block !important;
-    }
+  }
+  @include max(992) {
+    display: block !important;
   }
 }
 
