@@ -1,0 +1,18 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 76 76" style="enable-background:new 0 0 76 76;">
+  <defs>
+    <mask id="myMask">
+      <rect fill="#fff" rx="15" ry="15" width="76" height="76"/>
+    </mask>
+  </defs>
+  <style>
+    rect {
+      fill: white;
+    }
+    @media (prefers-color-scheme: dark) {
+      rect { fill: black; }
+    }
+  </style>
+  <rect id="image" mask="url(#myMask)" fill="#fff" x="0" y="0" width="76" height="76" />
+  <rect id="border" fill="none" stroke="#000" stroke-width="1" x="0.5" y="0.5" width="75" height="75" rx="15" ry="15" />
+</svg>
